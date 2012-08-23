@@ -1,0 +1,28 @@
+a.button, button, input[type="submit"],
+input[type="reset"], input[type="button"] {
+  margin: 0;
+  padding: 0 15px;
+  height: $form-item-height;
+  line-height: $form-item-height - 2px;
+  font-size: 13px;
+  color: #222;
+  text-shadow: 1px 1px 1px lighten($button-color, 20%);
+  border-color: $button-border-color;
+  @include vertical-gradient($button-color);
+  @include box-shadow(inset 0 1px lighten($button-color, 10%), inset 0 -1px darken($button-color, 10%));
+
+  &:hover {
+    border-color: $button-border-color;
+    @include vertical-gradient(lighten($button-color, 5%));
+    @include box-shadow(inset 0 1px lighten($button-color, 20%), inset 0 -1px $button-color);
+  }
+
+  &:active {
+    color: mix($button-color, black, 30%);
+    text-shadow: none;
+    border-color: $button-border-color;
+    @include vertical-gradient(darken($button-color, 5%), $button-color);
+    @include box-shadow(inset 0 1px 1px darken($button-color, 10%));
+  }
+
+}

@@ -1,0 +1,121 @@
+
+$form-item-height: 34px;
+
+form {
+  @extend .full-width-block;
+  margin: 0;
+
+  .text_field, .select_field, .radio_field {
+    @extend .full-width-block;
+    margin: 0 0 $padding;
+
+    + .text_field, + .select_field, + .radio_field {
+      margin-top: -5px;
+    }
+  }
+
+  .text_field, .select_field {
+
+    label {
+      float: left;
+      clear: both;
+      margin: 0 0 ($padding / 4);
+    }
+
+  }
+
+  .text_field {
+    input, textarea {
+      float: left;
+      clear: both;
+      margin: 0;
+      padding: 6px 8px 5px;
+      width: 100%;
+      height: $form-item-height;
+      line-height: 100%;
+      @include box-sizing(border-box);
+      @include box-shadow(inset 0 1px 1px rgba(0,0,0,.2));
+      @include border-radius(4px);
+    }
+
+    textarea {
+      height: auto;
+      resize: vertical;
+      min-height: 100px;
+      max-height: 200px;
+    }
+
+  }
+
+  .select_field {
+
+    select {
+      margin: 0;
+      float: left;
+      clear: left;
+      width: 100%;
+      height: $form-item-height;
+    }
+  }
+
+  .submit_field {
+    @extend .full-width-block;
+    margin: 0;
+  }
+
+}
+
+
+// Radios & Checkboxes
+
+  .radio_field {
+    margin: 0 0 ($padding - 5px);
+  }
+
+  .radio-list li {
+    float: left;
+    margin-right: $padding / 2;
+
+    input, .checkbox-icon, .radio-icon, label {
+      display: inline-block;
+      clear: none;
+      line-height: $form-item-height;
+    }
+  }
+
+  .radio-icon, .checkbox-icon {
+    display: inline-block;
+    width: $form-item-height;
+    height: $form-item-height;
+    color: #555;
+    cursor: pointer;
+
+    &:active { color: #888; }
+
+    &:before {
+      font: normal 20px/#{$form-item-height} 'TTL-Icons';
+      speak: none;
+    }
+
+    &.checked {
+      color: #222;
+      &:active { color: #666; }
+    }
+  }
+
+  .radio-icon {
+    @extend .icon-radio-unchecked;
+    &.checked {
+      @extend .icon-radio-checked;
+    }
+  }
+
+  .checkbox-icon {
+    @extend .icon-checkbox;
+    &.checked {
+      @extend .icon-checkbox-checked;
+    }
+  }
+
+
+

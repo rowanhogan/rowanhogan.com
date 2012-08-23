@@ -1,0 +1,44 @@
+!!!5
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:name => "viewport", :content => "width=400, initial-scale=1"}
+    %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
+
+    = stylesheet_link_tag "site.css"
+    = javascript_include_tag "application.js"
+    = yield_content :head
+
+  %body
+
+    .wrapper
+
+      %header#header
+        %figure
+          #waves
+            - numbers = Array (1..20)
+            - numbers.reverse.each do |num|
+              %span{:class => "wave wave-#{num}"}
+
+          = image_tag "http://gravatar.com/avatar/bcc3b40bdd3fe398aad85a6abda0f91b?size=400", :alt => "Photo of Rowan Hogan"
+          %figcaption Rowan Hogan
+
+
+      %section#main= yield
+
+      %ul#icons
+        %li.icon-1.icon-browser
+        %li.icon-2.icon-mobile
+        %li.icon-3.icon-keyboard
+        %li.icon-4.icon-cloud
+        %li.icon-5.icon-globe
+        %li.icon-6.icon-write
+        %li.icon-7.icon-microphone
+
+      %footer#footer
+        %nav
+          = link_to 'Github', 'https://github.com/rowanhogan', :class => 'icon-github'
+          = link_to 'Dribbble', 'http://dribbble.com/rowanhogan', :class => 'icon-dribbble'
+          = link_to 'Twitter', 'http://twitter.com/rowanhogan', :class => 'icon-twitter'
+          = link_to 'Last.fm', 'http://last.fm/user/rehogan', :class => 'icon-lastfm'
+          = link_to 'LinkedIn', 'http://linkedin.com/in/rowanhogan', :class => 'icon-linkedin'
