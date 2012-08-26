@@ -1,0 +1,22 @@
+
+#main {
+  position: relative;
+  padding: 0 0 30px;
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(
+    rgba(white, 0) 0%,
+    rgba(white, .75) 15%,
+    rgba(white, .85) 50%,
+    rgba(white, .75) 85%,
+    rgba(white, 0) 100%
+  ));
+
+  header {
+    padding: $padding ($padding / 2);
+  }
+
+  p {
+    clear: both;
+    margin: 0 0 ($padding / 2);
+  }
+}

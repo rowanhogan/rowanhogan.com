@@ -1,0 +1,33 @@
+@media screen and (max-width: 640px) {
+
+  .wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    float: none;
+  }
+
+  #main p {
+    display: none;
+  }
+
+  #footer {
+    bottom: $padding * 2;
+
+    a:before { font-size: 40px; }
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .wrapper {
+    min-height: 0px;
+  }
+
+  #footer {
+    position: relative;
+    margin-top: $padding / 3;
+  }
+
+}

@@ -1,0 +1,33 @@
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  font: 400 #{$font-size}/#{$line-height} $font-family;
+  letter-spacing: -0.03em;
+  color: $font-color;
+  text-align: center;
+  background: white;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  float: left;
+  width: 100%;
+  height: 100%;
+  min-height: $min-height;
+  position: relative;
+}
+
+header, nav, section, footer {
+  @extend .full-width-block;
+}
+
+header, figure, section, footer, div, span, img {
+  @include box-sizing(border-box);
+}
+
+#header { padding: $padding; }

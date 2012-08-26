@@ -9404,14 +9404,21 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 
 })( window );
 (function() {
-  var date, today, todayDate;
 
-  date = new Date();
+  this.waves = function() {
+    return $("#waves").addClass("anim").delay(4000).queue(function() {
+      $(this).removeClass("anim");
+      return $(this).dequeue();
+    });
+  };
 
-  today = date.getDate();
-
-  todayDate = today + "";
-
-  $(function() {});
+  $(function() {
+    window.setTimeout((function() {
+      return waves();
+    }), 1250);
+    return window.setInterval((function() {
+      return waves();
+    }), 5500);
+  });
 
 }).call(this);

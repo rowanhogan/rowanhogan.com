@@ -1,0 +1,40 @@
+
+$animation-length: .2s;
+
+@media screen and (min-device-width: 1025px) {
+
+  #waves {
+    &.anim {
+      .wave {
+        -webkit-animation: waveAnim $animation-length 1;
+        -moz-animation: waveAnim $animation-length 1;
+        animation: waveAnim $animation-length 1;
+      }
+
+      @for $i from 1 through 20 {
+        .wave-#{$i} {
+          -webkit-animation-delay: ($i - 2) * $animation-length;
+          -moz-animation-delay: ($i - 2) * $animation-length;
+          animation-delay: ($i - 2) * $animation-length;
+        }
+      }
+    }
+  }
+
+}
+
+
+@-webkit-keyframes waveAnim {
+  0%    { border-color: rgba(0,0,0,.25); }
+  100%  { border-color: rgba(0,0,0,.15); }
+}
+
+@-moz-keyframes waveAnim {
+  0%    { border-color: rgba(0,0,0,.25); }
+  100%  { border-color: rgba(0,0,0,.15); }
+}
+
+@-webkit-keyframes waveAnim {
+  0%    { border-color: rgba(0,0,0,.25); }
+  100%  { border-color: rgba(0,0,0,.15); }
+}
