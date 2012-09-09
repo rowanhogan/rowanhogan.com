@@ -51,7 +51,7 @@ figure {
 }
 
 #main {
-  article { z-index: 3; }
+  article { z-index: 4; }
 
   .slider {
     &:before, &:after { z-index: 3; }

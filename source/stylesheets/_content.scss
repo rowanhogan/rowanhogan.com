@@ -39,8 +39,9 @@ $slider-width: $slider-image-size * 5;
   // margin: -#{($slider-width / 2 + 125)} -#{$slider-width / 2};
   // @include border-radius(50%);
   position: relative;
+  top: -100px;
   width: 100%;
-  height: 330px;
+  height: 500px;
   overflow: hidden;
   @include rotated-text(12, 360deg, -330deg);
 
