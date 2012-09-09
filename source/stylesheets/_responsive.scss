@@ -7,12 +7,12 @@
     float: none;
   }
 
-  #main p {
-    display: none;
-  }
+  // #main p {
+  //   display: none;
+  // }
 
   #footer {
-    bottom: $padding * 2;
+    // bottom: $padding * 2;
 
     a:before { font-size: 40px; }
   }
@@ -22,12 +22,12 @@
 @media screen and (max-width: 400px) {
 
   .wrapper {
-    min-height: 0px;
+    min-height: $min-height + ($padding * 2);
   }
 
-  #footer {
-    position: relative;
-    margin-top: $padding / 3;
-  }
+  // #footer {
+  //   position: relative;
+  //   margin-top: $padding / 3;
+  // }
 
 }

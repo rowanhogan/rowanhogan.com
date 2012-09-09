@@ -2,7 +2,7 @@
 $figcaption-width: 250px;
 $figcaption-height: ($avatar-size / 3) + ($padding / 3);
 
-figure {
+#header figure {
   position: relative;
 
   .image-wrapper, img {
@@ -14,13 +14,11 @@ figure {
   .image-wrapper {
     position: relative;
     margin: auto;
-    z-index: 30;
 
     &:after {
       content: '';
       position: absolute;
       top: 0; right: 0; bottom: 0; left: 0;
-      z-index: 40;
       @include border-radius(50%);
       @include box-shadow(
         inset 0 0 10px black,
@@ -32,7 +30,6 @@ figure {
   img {
     display: block;
     position: relative;
-    z-index: 20;
     @include box-shadow(0 0 5px rgba(0,0,0,.05));
   }
 
@@ -51,7 +48,6 @@ figure {
     text-align: center;
     text-indent: -3px;
     white-space: nowrap;
-    z-index: 10;
     @include box-shadow(0 0 20px white, 0 1px 1px rgba(0,0,0,.15));
     @include box-sizing(border-box);
     @include border-radius($figcaption-height / 2);

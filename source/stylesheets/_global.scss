@@ -10,7 +10,7 @@ body {
   color: $font-color;
   text-align: center;
   background: white;
-  overflow: hidden;
+  min-height: $min-height;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -18,6 +18,7 @@ body {
   float: left;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   min-height: $min-height;
   position: relative;
 }
@@ -30,4 +31,33 @@ header, figure, section, footer, div, span, img {
   @include box-sizing(border-box);
 }
 
-#header { padding: $padding; }
+#header {
+  position: relative;
+  padding: $padding;
+}
+
+// Z Index
+
+#header, #icons, #footer { z-index: 3; }
+
+figure {
+  .image-wrapper {
+    z-index: 3;
+    &:after { z-index: 4; }
+  }
+  img { z-index: 2; }
+
+  figcaption { z-index: 1; }
+}
+
+#main {
+  article { z-index: 3; }
+
+  .slider {
+    &:before, &:after { z-index: 3; }
+
+    ul { z-index: 3; }
+    .current { z-index: 5; }
+    .beforeCurrent, .afterCurrent { z-index: 4; }
+  }
+}

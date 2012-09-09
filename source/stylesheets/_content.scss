@@ -2,14 +2,18 @@
 #main {
   position: relative;
   padding: 0 0 30px;
-  $experimental-support-for-svg: true;
-  @include background-image(linear-gradient(
-    rgba(white, 0) 0%,
-    rgba(white, .75) 15%,
-    rgba(white, .85) 50%,
-    rgba(white, .75) 85%,
-    rgba(white, 0) 100%
-  ));
+
+  article {
+    position: relative;
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(
+      rgba(white, 0) 0%,
+      rgba(white, .75) 15%,
+      rgba(white, .85) 50%,
+      rgba(white, .75) 85%,
+      rgba(white, 0) 100%
+    ));
+  }
 
   header {
     padding: $padding ($padding / 2);
@@ -20,3 +24,115 @@
     margin: 0 0 ($padding / 2);
   }
 }
+
+
+$slider-image-size: 200px;
+$slider-images-count: 5;
+$slider-images-padding: $padding / 3;
+$slider-width: $slider-image-size * 5;
+
+.slider {
+  // position: absolute;
+  // width: $slider-width;
+  // height: $slider-width;
+  // top: 50%; left: 50%;
+  // margin: -#{($slider-width / 2 + 125)} -#{$slider-width / 2};
+  // @include border-radius(50%);
+  position: relative;
+  width: 100%;
+  height: 330px;
+  overflow: hidden;
+  @include rotated-text(12, 360deg, -330deg);
+
+  // &:before, &:after {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: 200px;
+  //   width: 100%; height: 100%;
+  //   @include background-image(linear-gradient(top, white 0%, white 70%, rgba(255,255,255,0) 100%));
+  // }
+
+  // &:before {
+  //   left: -25%;
+  //   @include transform(rotate(-45deg));
+  // }
+
+  // &:after {
+  //   right: -25%;
+  //   @include transform(rotate(45deg));
+  // }
+
+  ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $slider-width;
+    height: $slider-width;
+    margin: -870px -#{$slider-width / 2};
+    @include transition(all .5s ease-in-out);
+  }
+
+  li {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -#{$slider-image-size / 2};
+    padding: ($slider-width - $slider-image-size) 0 0;
+    width: $slider-image-size;
+    height: $slider-width;
+    opacity: .25;
+    @include transform-origin(top center);
+    @include box-sizing(border-box);
+
+    &.beforeCurrent, &.afterCurrent {
+      opacity: .5;
+
+      a {
+        width: $slider-image-size + $padding;
+        height: $slider-image-size + $padding;
+        margin-top: -15px;
+        @include box-shadow(0 1px 2px rgba(0,0,0,.25));
+      }
+    }
+
+    &.beforeCurrent a { margin-right: -#{$padding}; }
+    &.afterCurrent a { margin-left: -#{$padding}; }
+
+    &.current {
+      opacity: 1;
+
+      a {
+        width: $slider-image-size + (2 * $padding);
+        height: $slider-image-size + (2 * $padding);
+        margin: -#{$padding};
+        @include box-shadow(0 2px 4px rgba(0,0,0,.45));
+      }
+    }
+
+    a {
+      display: inline-block;
+      width: $slider-image-size - $padding;
+      height: $slider-image-size - $padding;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,.25);
+      @include border-radius(50%);
+
+      &:hover img {
+        height: 100%;
+        width: auto;
+        margin: 0 0 0 -34px;
+      }
+
+      &:active, &.active {
+        @include box-shadow(0 0 10px hsl(30,10%,50%));
+      }
+    }
+
+    img {
+      display: block;
+      margin: -#{$slider-image-size / 4} -#{$slider-image-size / 2};
+      width: 400px; height: 300px; // Dribble
+    }
+  }
+}
+

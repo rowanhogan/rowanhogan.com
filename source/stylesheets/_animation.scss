@@ -1,5 +1,5 @@
 
-$animation-length: .2s;
+$animation-length: .15s;
 
 @media screen and (min-device-width: 1025px) {
 
@@ -13,9 +13,9 @@ $animation-length: .2s;
 
       @for $i from 1 through 20 {
         .wave-#{$i} {
-          -webkit-animation-delay: ($i - 2) * $animation-length;
-          -moz-animation-delay: ($i - 2) * $animation-length;
-          animation-delay: ($i - 2) * $animation-length;
+          -webkit-animation-delay: ($i - 2) * $animation-length * .75;
+          -moz-animation-delay: ($i - 2) * $animation-length * .75;
+          animation-delay: ($i - 2) * $animation-length * .75;
         }
       }
     }
@@ -23,18 +23,13 @@ $animation-length: .2s;
 
 }
 
-
 @-webkit-keyframes waveAnim {
-  0%    { border-color: rgba(0,0,0,.25); }
-  100%  { border-color: rgba(0,0,0,.15); }
+  0%    { opacity: .35; }
+  100%  { opacity: .35; }
 }
 
 @-moz-keyframes waveAnim {
-  0%    { border-color: rgba(0,0,0,.25); }
-  100%  { border-color: rgba(0,0,0,.15); }
+  0%    { opacity: .35; }
+  100%  { opacity: .35; }
 }
 
-@-webkit-keyframes waveAnim {
-  0%    { border-color: rgba(0,0,0,.25); }
-  100%  { border-color: rgba(0,0,0,.15); }
-}

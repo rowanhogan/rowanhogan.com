@@ -103,6 +103,18 @@
 }
 
 
+// https://gist.github.com/8615d6dc847e10c72fe5
+
+@mixin rotated-text($num-characters: 100, $angle-span: 180deg, $angle-offset: 0deg) {
+  $angle-per-char: $angle-span / $num-characters;
+
+  @for $i from 1 through $num-characters {
+    li:nth-child(#{$i}) {
+      @include transform(rotate($angle-offset + $angle-per-char * $i));
+    }
+  }
+}
+
 
 // ---------------------------------------------------------------------------- //
 

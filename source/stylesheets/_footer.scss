@@ -88,6 +88,8 @@
     width: 42px;
     height: 100px;
 
+    &:active, &.active { color: #111; }
+
     &:before { font-size: 30px; width: 42px; }
   }
 
