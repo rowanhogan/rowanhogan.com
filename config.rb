@@ -3,32 +3,27 @@
 ###
 
 # Susy grids in Compass
-# First: gem install compass-susy-plugin
+# First: gem install susy
 # require 'susy'
 
 # Change Compass configuration
-compass_config do |config|
-  config.output_style = :compressed
+# compass_config do |config|
+#   config.output_style = :compact
+# end
+
+###
+# Blog
+###
+
+activate :blog do |blog|
+  blog.permalink = "blog/:year/:title.html"
 end
 
 ###
-# Haml
+# Page options, layouts, aliases and proxies
 ###
 
-# CodeRay syntax highlighting in Haml
-# First: gem install haml-coderay
-# require 'haml-coderay'
-
-# CoffeeScript filters in Haml
-# First: gem install coffee-filter
-# require 'coffee-filter'
-
-# Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
-
-###
-# Page command
-###
+activate :directory_indexes
 
 # Per-page layout changes:
 #
@@ -52,6 +47,9 @@ end
 # Helpers
 ###
 
+# Automatic image dimensions on image_tag helper
+# activate :automatic_image_sizes
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
@@ -59,21 +57,14 @@ end
 #   end
 # end
 
-# Change the CSS directory
-# set :css_dir, "alternative_css_directory"
-
-# Change the JS directory
-# set :js_dir, "alternative_js_directory"
-
-# Change the images directory
-# set :images_dir, "alternative_image_directory"
+set :css_dir,     'assets/stylesheets'
+set :js_dir,      'assets/javascripts'
+set :images_dir,  'assets/images'
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
 
-  # Minify Javascript on build
+  activate :minify_css
   activate :minify_javascript
 
   # Enable cache buster

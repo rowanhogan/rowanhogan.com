@@ -1,0 +1,13 @@
+<li class="timeline-list-item timeline-shot" data-time="<%= new Date(@created_at).getTime() %>">
+  <header>
+    <h1>
+      <a href="<%= @url %>"><%= @title %></a>
+    </h1>
+  </header>
+  <article>
+    <a href="<%= @url %>" title="<%= @title %>">
+      <img src="<%= @image_teaser_url %>">
+    </a>
+  </article>
+
+</li>

@@ -1,0 +1,45 @@
+!!! 5
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+%html.no-js{ :lang => "en" }
+  <!--<![endif]-->
+  %head
+    %meta{ :charset => "utf-8" }
+
+    -# Always force latest IE rendering engine (even in intranet) & Chrome Frame
+    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+    %meta{ name: "description", content: "Full-stack designer from Brisbane, Australia." }
+    %meta{ :name => "viewport", :content => "initial-scale=1.0" }
+
+    = favicon_tag "favicon.ico"
+
+    %title= data.page.title || "Rowan Hogan"
+
+    = stylesheet_link_tag "application"
+    -# = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js", "application"
+
+    /[if lt IE 9]
+      = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"
+
+  %body{ class: page_classes }
+    %header.header
+      .container
+        %h1 Rowan Hogan
+        %h2.subtitle Full-stack designer
+
+        %hr
+
+        %p Working on a new site&hellip;
+
+    %section.main
+      .container
+        = yield
+
+    :javascript
+      var _gaq=[['_setAccount','UA-42849478-1'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));

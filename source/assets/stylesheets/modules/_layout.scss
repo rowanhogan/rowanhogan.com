@@ -1,0 +1,23 @@
+
+%document {
+  font: #{$font-size}/#{$line-height} $font-family;
+  min-height: 100%;
+  color: $color;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+%container {
+  max-width: $max-width;
+  margin: auto;
+  padding: $padding;
+}
+
+html {
+  @extend %document;
+}
+
+.container {
+  @extend %container;
+}

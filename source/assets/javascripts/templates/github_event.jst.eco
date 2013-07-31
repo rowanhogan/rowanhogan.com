@@ -1,0 +1,11 @@
+<li class="timeline-list-item github-event" data-time="<%= new Date(@created_at).getTime() %>">
+  <header>
+    <h1>
+      <%= @type %>
+    </h1>
+  </header>
+  <article>
+    <a href="<%= @repo.url %>"><%= @repo.name %></a>
+  </article>
+
+</li>

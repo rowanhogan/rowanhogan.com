@@ -1,0 +1,26 @@
+
+// Typography
+
+@import url(http://fonts.googleapis.com/css?family=Lato|Bitter|Alegreya:400italic,700italic,400,700|Alegreya+SC:400,400italic,700,700italic);
+
+$font-size: 125%;
+$line-height: 1.5em;
+$font-family: 'Alegreya', 'EB Garamond', serif;
+
+$title-font-family: "Lato", 'Open Sans', sans-serif;
+
+
+$color: #444;
+$link-color: saddlebrown;
+
+$background-color: mix($link-color, white, 1%);
+
+
+$padding: 2em;
+$max-width: 42em;
+
+// ------- //
+
+$button-border-width: 25em;
+$button-height: $padding;
+$button-radius: .25em;
