@@ -16,7 +16,6 @@ sortTimeline = ->
     else
       data = data.data
 
-    console?.log data
     count = data.length
 
     $.each data, (i, item) ->
@@ -30,6 +29,7 @@ sortTimeline = ->
         $(".header .container").append("<label class='list-label icon-#{type}'>#{data.length}</label>")
 
 $ ->
+  console?.log "G'Day! :) Please, feel free to take a look around..."
   $('html').removeClass('no-js')
 
   retrieveItems("dribbble", "http://api.dribbble.com/players/rowanhogan/shots?callback=?")
