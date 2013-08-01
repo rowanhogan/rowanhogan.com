@@ -21,3 +21,16 @@ html {
 .container {
   @extend %container;
 }
+
+.header-nav {
+  float: right;
+
+  a {
+    float: left;
+    width: 1.75em;
+    height: 1.75em;
+    margin-left: .25em;
+    background: whitesmoke;
+    border-radius: .25em;
+  }
+}

@@ -1,7 +1,7 @@
 
 // Typography
 
-@import url(http://fonts.googleapis.com/css?family=Lato|Bitter|Alegreya:400italic,700italic,400,700|Alegreya+SC:400,400italic,700,700italic);
+// @import url(http://fonts.googleapis.com/css?family=Lato|Bitter|Alegreya:400italic,700italic,400,700|Alegreya+SC:400,400italic,700,700italic);
 
 $font-size: 125%;
 $line-height: 1.5em;
@@ -11,9 +11,9 @@ $title-font-family: "Lato", 'Open Sans', sans-serif;
 
 
 $color: #444;
-$link-color: saddlebrown;
+$link-color: slategray;
 
-$background-color: mix($link-color, white, 1%);
+$background-color: mix($link-color, white, 2%);
 
 
 $padding: 2em;

@@ -1,0 +1,13 @@
+<li class="timeline-list-item timeline-instagram icon-instagram" data-time="<%= new Date(@created_time * 1000).getTime() %>">
+  <header>
+    <h1>
+      <a href="<%= @link %>">Instagram</a>
+    </h1>
+  </header>
+
+  <article>
+    <a href="<%= @link %>" class='thumb-container' target="_blank">
+      <img src="<%= @images.standard_resolution.url %>" class="thumb">
+    </a>
+  </article>
+</li>

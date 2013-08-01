@@ -1,7 +1,8 @@
 
-.timeline-shot {
-  a { color: hotpink; }
-}
+.timeline-shot, .timeline-shot a { color: hotpink; }
+.timeline-instagram, .timeline-instagram a { color: #306088; }
+.timeline-lastfm, .timeline-lastfm a { color: #b20001; }
+
 
 .timeline-list-item {
   list-style: none;
@@ -9,6 +10,35 @@
   margin: 0 0 1em;
 
   header {
-    font-style: .75em;
+    font-size: .75em;
+    border-bottom: thin solid #eee;
+    margin: 0 0 1em;
   }
+}
+
+.thumb-container {
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.thumb {
+  display: block;
+  max-height: 100%;
+}
+
+
+.go-to-top {
+  position: fixed;
+  font-weight: bold;
+  font-style: italic;
+  bottom: 1em;
+  right: 1em;
+  line-height: 3em;
+  width: 3em;
+  background: whitesmoke;
+  text-align: center;
 }

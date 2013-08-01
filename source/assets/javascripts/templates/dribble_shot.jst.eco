@@ -1,12 +1,12 @@
-<li class="timeline-list-item timeline-shot" data-time="<%= new Date(@created_at).getTime() %>">
+<li class="timeline-list-item timeline-shot icon-dribbble" data-time="<%= new Date(@created_at).getTime() %>">
   <header>
     <h1>
       <a href="<%= @url %>"><%= @title %></a>
     </h1>
   </header>
   <article>
-    <a href="<%= @url %>" title="<%= @title %>">
-      <img src="<%= @image_teaser_url %>">
+    <a href="<%= @url %>" title="<%= @title %>" class='thumb-container' target="_blank">
+      <img src="<%= @image_teaser_url %>" class="thumb">
     </a>
   </article>
 
