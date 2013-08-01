@@ -1,4 +1,8 @@
-<% date = new Date(@date.uts * 1000).getTime() %>
+<% if @date?: %>
+  <% date = new Date(@date.uts * 1000).getTime() %>
+<% else: %>
+  <% date = new Date().getTime() %>
+<% end %>
 
 <li class="timeline-list-item timeline-lastfm" data-time="<%= date %>">
   <header>
@@ -12,5 +16,9 @@
       <strong><%= @artist["#text"] %></strong> - <%= @name %>
     </a>
   </article>
+
+  <% unless @date?: %>
+    <a href="http://www.last.fm/user/rehogan" class="now-playing">Now playing</a>
+  <%= end %>
 </li>
 

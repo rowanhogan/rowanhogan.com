@@ -18,6 +18,8 @@ sortTimeline = ->
 
     count = data.length
 
+    window[type] = data
+
     $.each data, (i, item) ->
       count--
 
