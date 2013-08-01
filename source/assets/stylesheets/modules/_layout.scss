@@ -12,6 +12,10 @@
   max-width: $max-width;
   margin: auto;
   padding: $padding;
+
+  @media screen and (max-width: $breakpoint-small) {
+    padding: $padding * .75;
+  }
 }
 
 html {
@@ -32,5 +36,64 @@ html {
     margin-left: .25em;
     background: whitesmoke;
     border-radius: .25em;
+  }
+
+}
+
+.main {
+  min-height: 20em;
+}
+
+.list-label {
+  position: relative;
+  font-family: $title-font-family;
+  float: left;
+  line-height: 1em;
+  margin: 4em 1.5em 4em 0;
+  font-size: .75em;
+  padding-left: 2em;
+
+  &:before {
+    font-size: 1.5em;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    line-height: 1em;
+    margin-top: -.5em;
+  }
+}
+
+.footer {
+  clear: both;
+  background-color: whitesmoke;
+}
+
+.footer-nav a {
+  margin-right: .5em;
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+  .footer-nav a { display: block; }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+
+  .header { text-align: center; }
+
+  .list-label {
+    float: none;
+    display: inline-block;
+    margin: 2em 0.5em 0;
+  }
+
+  .header-nav {
+    float: none;
+
+    a {
+      float: none;
+      display: inline-block;
+      margin: 0 0.25em 1.5em;
+    }
   }
 }

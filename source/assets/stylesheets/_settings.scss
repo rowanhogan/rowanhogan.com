@@ -1,7 +1,7 @@
 
 // Typography
 
-// @import url(http://fonts.googleapis.com/css?family=Lato|Bitter|Alegreya:400italic,700italic,400,700|Alegreya+SC:400,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Lato|Alegreya:400italic,400);
 
 $font-size: 125%;
 $line-height: 1.5em;
@@ -24,3 +24,7 @@ $max-width: 42em;
 $button-border-width: 25em;
 $button-height: $padding;
 $button-radius: .25em;
+
+
+$breakpoint-medium: $max-width;
+$breakpoint-small: 600px;

@@ -1,0 +1,16 @@
+<% date = new Date(@date.uts * 1000).getTime() %>
+
+<li class="timeline-list-item timeline-lastfm" data-time="<%= date %>">
+  <header>
+    <label class="date"><%= moment(date).format('DD MMMM YYYY'); %></label>
+    <h1 class="icon-lastfm">
+      <a href="<%= @url %>">Last.fm</a>
+    </h1>
+  </header>
+  <article>
+    <a href="<%= @url %>">
+      <strong><%= @artist["#text"] %></strong> - <%= @name %>
+    </a>
+  </article>
+</li>
+

@@ -1,6 +1,9 @@
-<li class="timeline-list-item timeline-shot icon-dribbble" data-time="<%= new Date(@created_at).getTime() %>">
+<% date = new Date(@created_at).getTime() %>
+
+<li class="timeline-list-item timeline-dribbble" data-time="<%= date %>">
   <header>
-    <h1>
+    <label class="date"><%= moment(date).format('DD MMMM YYYY'); %></label>
+    <h1 class="icon-dribbble">
       <a href="<%= @url %>"><%= @title %></a>
     </h1>
   </header>
