@@ -28,7 +28,7 @@ sortTimeline = ->
 
       if count is 0
         sortTimeline()
-        $("#timeline-list-labels").append("<label class='list-label icon-#{type}' data-type='#{type}'>#{data.length}</label>")
+        $("#timeline-list-labels").append("<label class='list-label icon-#{type}' data-type='#{type}'></label>")
 
 
 @initTimeline = ->
@@ -62,21 +62,16 @@ $(document).on 'click', '#top', (e) ->
   $(window).scrollTop(0)
 
 
-$(document).off 'click', '.list-label'
-$(document).on 'click', '.list-label', (e) ->
+$(document).off 'click', '#timeline-list-labels label'
+$(document).on 'click', '#timeline-list-labels label', (e) ->
   $this = $(this)
   type = $this.data('type')
 
-  $('.list-label').removeClass('active')
-  $(".timeline-list-item").hide()
-
+  $('#timeline-list-labels label').removeClass('active')
   $this.addClass('active')
-  $(".timeline-#{type}, .show-all-link").show()
 
-
-$(document).off 'click', '.show-all-link'
-$(document).on 'click', '.show-all-link', (e) ->
-  $this = $(this)
-
-  $this.hide()
-  $(".timeline-list-item").show()
+  if type is "all"
+    $(".timeline-list-item").show()
+  else
+    $(".timeline-list-item").hide()
+    $(".timeline-#{type}, .show-all-link").show()
