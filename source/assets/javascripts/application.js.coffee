@@ -18,7 +18,7 @@ sortTimeline = ->
 
     count = data.length
 
-    window[type] = data
+    # window[type] = data
 
     $.each data, (i, item) ->
       count--
@@ -31,7 +31,7 @@ sortTimeline = ->
         $("#timeline-list-labels").append("<label class='list-label icon-#{type}' data-type='#{type}'>#{data.length}</label>")
 
 
-initTimeline = ->
+@initTimeline = ->
   $('#timeline').html('')
   $("#timeline-list-labels").find('.list-label').remove()
   retrieveItems("dribbble", "http://api.dribbble.com/players/rowanhogan/shots?callback=?")
@@ -40,22 +40,21 @@ initTimeline = ->
   retrieveItems("instagram", "https://api.instagram.com/v1/users/682546/media/recent/?access_token=#{$('#instagram').data('token')}&callback=?")
 
 $ ->
+  new FastClick(document.body)
   console?.log "G'Day! :) Please, feel free to take a look around..."
   $('html').removeClass('no-js')
 
   initTimeline()
 
-  setInterval (->
-    initTimeline()
-  ), 60000
-
 
 $(document).on 'scroll', (e) ->
   y_pos = $(window).scrollTop()
 
-  if y_pos > 0
+  if y_pos > $('.header').outerHeight()
+    $("#timeline-list-labels").addClass('fixed')
     $('body').append('<a href="#" id="top" class="go-to-top">Top</a>') unless $('#top').length
   else
+    $("#timeline-list-labels").removeClass('fixed')
     $('#top').remove()
 
 $(document).on 'click', '#top', (e) ->
@@ -68,7 +67,10 @@ $(document).on 'click', '.list-label', (e) ->
   $this = $(this)
   type = $this.data('type')
 
+  $('.list-label').removeClass('active')
   $(".timeline-list-item").hide()
+
+  $this.addClass('active')
   $(".timeline-#{type}, .show-all-link").show()
 
 

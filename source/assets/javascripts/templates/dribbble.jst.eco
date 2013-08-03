@@ -4,12 +4,13 @@
   <header>
     <label class="date"><%= moment(date).format('DD MMMM YYYY'); %></label>
     <h1 class="icon-dribbble">
-      <a href="<%= @url %>"><%= @title %></a>
+      <a href="<%= @url %>">Dribbble</a>
     </h1>
   </header>
   <article>
     <a href="<%= @url %>" title="<%= @title %>" class='thumb-container' target="_blank">
       <img src="<%= @image_url %>" class="thumb">
+      <label class="image-label"><%= @title %></label>
     </a>
   </article>
 

@@ -43,6 +43,11 @@ html {
 
 .main {
   min-height: 20em;
+
+  .container {
+    position: relative;
+    padding-top: 4em;
+  }
 }
 
 

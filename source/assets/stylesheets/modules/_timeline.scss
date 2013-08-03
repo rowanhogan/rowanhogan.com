@@ -1,13 +1,20 @@
 
-%dribbble   { color: hotpink; }
-%instagram { color: steelblue; }
-%lastfm    { color: firebrick; }
-%github    { color: slategrey; }
-
-
 .timeline-list-labels {
-  margin: -2em auto 3em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   text-align: center;
+  padding: .75em .25em;
+  z-index: 100;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+  }
 
   label {
     position: relative;
@@ -26,9 +33,9 @@
     &.show-all-link {
       display: none;
       color: $link-color;
-      background: whitesmoke;
-      padding: .25em .5em;
-      border-radius: 2px;
+      padding: 0;
+      font-weight: bold;
+      text-transform: uppercase;
     }
   }
 
@@ -41,6 +48,19 @@
       left: 0;
       line-height: 1em;
       margin-top: -.5em;
+    }
+
+    &.active {
+      color: white;
+      padding: .5em .5em .5em 2em;
+      text-indent: .5em;
+      margin: 0;
+      border-radius: .25em;
+
+      &.icon-dribbble { background: $dribbble; }
+      &.icon-instagram { background: $instagram; }
+      &.icon-lastfm { background: $lastfm; }
+      &.icon-github { background: $github; }
     }
   }
 
@@ -57,10 +77,10 @@
 }
 
 
-.timeline-dribbble .icon-dribbble, .list-label.icon-dribbble      { @extend %dribbble; }
-.timeline-instagram .icon-instagram, .list-label.icon-instagram    { @extend %instagram; }
-.timeline-lastfm .icon-lastfm, .list-label.icon-lastfm          { @extend %lastfm; }
-.timeline-github .icon-github, .list-label.icon-github          { @extend %github; }
+.timeline-dribbble .icon-dribbble, .list-label.icon-dribbble    { color: $dribbble; }
+.timeline-instagram .icon-instagram, .list-label.icon-instagram { color: $instagram; }
+.timeline-lastfm .icon-lastfm, .list-label.icon-lastfm          { color: $lastfm; }
+.timeline-github .icon-github, .list-label.icon-github          { color: $github; }
 
 
 .timeline-list-item {
@@ -102,16 +122,35 @@
   max-width: 100%;
 }
 
+.image-label {
+  position: absolute;
+  font-size: 80%;
+  font-weight: bold;
+  font-style: italic;
+  bottom: 0;
+  left: 0;
+  line-height: 1em;
+  margin: 1em;
+  background: rgba(white, .85);
+  padding: .25em .5em;
+  border-radius: .25em;
+  cursor: pointer;
+  max-width: 75%;
+  @include ellipsis;
+}
+
 
 .go-to-top {
   position: fixed;
   font-weight: bold;
   font-style: italic;
-  bottom: 1.25em;
-  right: 1.25em;
-  line-height: 3em;
-  width: 3em;
-  background: whitesmoke;
+  bottom: 1em;
+  right: 1em;
+  line-height: 2em;
+  width: 2em;
+  background: mix($link-color, white);
+  color: white;
+  border-radius: .25em;
   text-align: center;
 }
 
@@ -174,6 +213,8 @@
         margin-right: 0;
         margin-left: -.3em;
       }
+
+      .image-label { margin-left: 2.25em; }
     }
   }
 

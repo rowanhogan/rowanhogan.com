@@ -10,6 +10,10 @@
   <article>
     <a href="<%= @link %>" class='thumb-container' target="_blank">
       <img src="<%= @images.standard_resolution.url %>" class="thumb">
+
+      <% if @caption?: %>
+        <label class="image-label"><%= @caption.text %></label>
+      <% end %>
     </a>
   </article>
 </li>
