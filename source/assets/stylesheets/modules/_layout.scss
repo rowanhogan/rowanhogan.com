@@ -12,6 +12,7 @@
   max-width: $max-width;
   margin: auto;
   padding: $padding;
+  clear: both;
 
   @media screen and (max-width: $breakpoint-small) {
     padding: $padding * .75;
@@ -44,25 +45,6 @@ html {
   min-height: 20em;
 }
 
-.list-label {
-  position: relative;
-  font-family: $title-font-family;
-  float: left;
-  line-height: 1em;
-  margin: 4em 1.5em 4em 0;
-  font-size: .75em;
-  padding-left: 2em;
-
-  &:before {
-    font-size: 1.5em;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    line-height: 1em;
-    margin-top: -.5em;
-  }
-}
 
 .footer {
   clear: both;
@@ -84,7 +66,7 @@ html {
   .list-label {
     float: none;
     display: inline-block;
-    margin: 2em 0.5em 0;
+    margin: 4em 1.5em 0 0;
   }
 
   .header-nav {

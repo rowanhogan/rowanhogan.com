@@ -9,7 +9,7 @@
   </header>
   <article>
     <a href="<%= @url %>" title="<%= @title %>" class='thumb-container' target="_blank">
-      <img src="<%= @image_teaser_url %>" class="thumb">
+      <img src="<%= @image_url %>" class="thumb">
     </a>
   </article>
 

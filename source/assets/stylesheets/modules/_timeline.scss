@@ -4,6 +4,59 @@
 %lastfm    { color: firebrick; }
 %github    { color: slategrey; }
 
+
+.timeline-list-labels {
+  margin: -2em auto 3em;
+  text-align: center;
+
+  label {
+    position: relative;
+    font-family: $title-font-family;
+    display: inline-block;
+    line-height: 1em;
+    margin: 0 .5em;
+    font-size: .75em;
+    padding-left: 2em;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .75;
+    }
+
+    &.show-all-link {
+      display: none;
+      color: $link-color;
+      background: whitesmoke;
+      padding: .25em .5em;
+      border-radius: 2px;
+    }
+  }
+
+  .list-label {
+    &:before {
+      font-size: 1.5em;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      line-height: 1em;
+      margin-top: -.5em;
+    }
+  }
+
+}
+
+.timeline {
+  position: relative;
+
+  &:after {
+    content: ' ';
+    display: block;
+    clear: both;
+  }
+}
+
+
 .timeline-dribbble .icon-dribbble, .list-label.icon-dribbble      { @extend %dribbble; }
 .timeline-instagram .icon-instagram, .list-label.icon-instagram    { @extend %instagram; }
 .timeline-lastfm .icon-lastfm, .list-label.icon-lastfm          { @extend %lastfm; }
@@ -11,6 +64,7 @@
 
 
 .timeline-list-item {
+  position: relative;
   list-style: none;
   display: block;
   clear: both;
@@ -21,6 +75,21 @@
     border-bottom: thin solid #eee;
     margin: 0 0 1em;
 
+    h1 {
+      position: relative;
+      font-size: 1.25em;
+      padding-left: 1.25em;
+      line-height: 1.25em;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1em;
+        text-align: center;
+      }
+    }
+
     .date {
       float: right;
       font-style: italic;
@@ -30,7 +99,6 @@
 
 .thumb {
   display: block;
-  height: 8em;
   max-width: 100%;
 }
 
@@ -47,7 +115,6 @@
   text-align: center;
 }
 
-
 @media screen and (max-width: $breakpoint-small) {
 
   .timeline-list-item h1 a {
@@ -59,8 +126,17 @@
 }
 
 
-
 @media screen and (min-width: $breakpoint-medium) {
+
+  .timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: .1em solid #eee;
+    margin-left: -.05em;
+    bottom: 3em;
+  }
 
   .timeline-list-item {
     float: left;
@@ -70,15 +146,39 @@
     margin-bottom: 3em;
     @include box-sizing(border-box);
 
+    &:before {
+      content: '';
+      content: attr(data-time);
+      position: absolute;
+      top: .5em;
+      right: 0;
+      width: .2em;
+      height: .2em;
+      margin-right: -.3em;
+      text-indent: -9999px;
+      overflow: hidden;
+      background: $link-color;
+      border: .2em solid $background-color;
+      border-radius: 50%;
+    }
+
     &:nth-child(even) {
       float: right;
       padding-right: 0;
       padding-left: 1em;
       clear: right;
+
+      &:before {
+        left: 0;
+        right: auto;
+        margin-right: 0;
+        margin-left: -.3em;
+      }
     }
   }
 
 }
+
 
 .now-playing {
   display: inline-block;
