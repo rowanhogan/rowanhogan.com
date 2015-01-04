@@ -151,13 +151,28 @@
   font-style: italic;
   bottom: 1em;
   right: 1em;
-  line-height: 2em;
+  height: 2em;
   width: 2em;
   background: mix($link-color, white);
   background: rgba(black, .45);
   color: white;
   border-radius: .25em;
-  text-align: center;
+  text-indent: -9999px;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    margin: -.25em -.5em;
+    font-size: 10px;
+    border-top: thin solid;
+    border-left: thin solid;
+    transform: rotate(45deg);
+  }
 }
 
 @media screen and (max-width: $breakpoint-small) {
