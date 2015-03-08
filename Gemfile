@@ -1,14 +1,11 @@
-# If you have OpenSSL installed, we recommend updating
-# the following line to use "https"
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem "middleman", "~>3.0.14"
-
-gem 'middleman-gh-pages'
-gem "middleman-blog"
-gem "middleman-syntax"
-gem "redcarpet"
-gem "builder", "~> 3.0.0"
-
-# Templates
-gem "eco"
+gem 'builder', '~> 3.0'
+gem 'middleman'
+gem 'middleman-autoprefixer'
+gem 'middleman-blog'
+gem 'middleman-deploy'
+gem 'middleman-livereload'
+gem 'middleman-s3_sync'
+gem 'middleman-syntax'
+gem 'redcarpet'

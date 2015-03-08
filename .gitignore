@@ -1,2 +1,4 @@
 .sass-cache
+.cache
 build
+source/assets/bower_components

@@ -1,35 +1,24 @@
 
-// Typography
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Source+Serif+Pro);
 
-@import url(http://fonts.googleapis.com/css?family=Lato|Alegreya:400italic,400);
+$font-size:               125% !default;
 
-$font-size: 125%;
-$line-height: 1.5em;
-$font-family: 'Alegreya', 'EB Garamond', serif;
+$font-family:             'Source Serif Pro', serif;
+$font-family-headings:    'Source Sans Pro', 'Helvetica Neue', sans-serif;
 
-$title-font-family: "Lato", 'Open Sans', sans-serif;
+$line-height:             1.5em;
+$line-height-relative:    1.5rem;
 
+$color-primary:           slategray;
+$dribbble:                hotpink;
+$instagram:               steelblue;
+$lastfm:                  firebrick;
+$github:                  slategrey;
 
-$color: #444;
-$link-color: slategray;
+$breakpoint-small:        32rem;
+$breakpoint-medium:       48rem;
+$breakpoint-large:        75rem;
 
-$dribbble: hotpink;
-$instagram: steelblue;
-$lastfm: firebrick;
-$github: slategrey;
-
-$background-color: mix($link-color, white, 2%);
-
-
-$padding: 2em;
-$max-width: 42em;
-
-// ------- //
-
-$button-border-width: 25em;
-$button-height: $padding;
-$button-radius: .25em;
-
-
-$breakpoint-medium: $max-width;
-$breakpoint-small: 600px;
+$gutter:                  $line-height-relative;
+$page-margin:             $line-height-relative * 2;
+$max-width:               $breakpoint-small;
