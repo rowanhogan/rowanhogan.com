@@ -1,6 +1,41 @@
 
-.container {
+html {
+  text-align: center;
+}
+
+a {
+  &:hover { color: black; }
+  &[onclick]:hover { cursor: pointer; }
+}
+
+
+.site-nav {
+  text-align: center;
+  font-size: 90%;
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    padding: .25em;
+
+    &.active {
+      color: black;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: .125em;
+        left: .25em;
+        right: .25em;
+        border-bottom: 2px solid;
+      }
+    }
+  }
+}
+
+.avatar {
+  border-radius: .25em;
   margin: auto;
-  max-width: $max-width;
-  padding: $padding
+  max-width: 100%;
 }

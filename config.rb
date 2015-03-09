@@ -20,7 +20,7 @@ activate :blog do |blog|
   blog.paginate = true
   blog.per_page = 20
   blog.permalink = ":title.html"
-  blog.prefix = "blog"
+  blog.prefix = "articles"
   blog.summary_length    = 200
   blog.summary_separator = /(READMORE)/
 end
@@ -30,7 +30,16 @@ page '/404',          layout: false
 page '/rss.xml',      layout: false
 page '/sitemap.xml',  layout: false
 
-page '/',             layout: :home
+helpers do
+  def menu_link(name, link)
+    if !page_classes[/(\S+\s+){#{1}}/].blank?
+      klass = (link == page_classes[/(\S+\s+){#{1}}/].strip ? 'active' : nil)
+    elsif page_classes == 'index' && name == 'Home'
+      klass = 'active'
+    end
+    link_to name.capitalize, "/#{link}", class: klass
+  end
+end
 
 configure :build do
   activate :asset_hash

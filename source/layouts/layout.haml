@@ -1,15 +1,17 @@
 !!! 5
 %html{ lang: "en" }
   %head
-    %title= data.page.title
+    %title= "#{data.page.title} | Rowan Hogan"
     = partial "layouts/head"
-  %body
+  %body{ class: page_classes }
     %header.site-header
       .container
-        %nav.site-nav= partial "layouts/social"
+        %nav.site-nav= partial "layouts/nav"
 
     %section.site-main
       .container
+        - unless data.page.show_title == false
+          %h1= data.page.title
         = yield
 
     %footer.site-footer

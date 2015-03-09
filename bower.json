@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "jquery": "~1.11.2",
-    "terrain": "~0.0.7"
+    "terrain": "~0.0.7",
+    "fastclick": "~1.0.6"
   }
 }
