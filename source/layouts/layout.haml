@@ -10,8 +10,9 @@
 
     %section.site-main
       .container
-        - unless data.page.show_title == false
-          %h1= data.page.title
+        %h1.page-title{ style: ("display: none" if data.page.show_title == false) }
+          = data.page.title
+        
         = yield
 
     %footer.site-footer

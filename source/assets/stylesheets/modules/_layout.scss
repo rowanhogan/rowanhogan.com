@@ -34,8 +34,12 @@ a {
   }
 }
 
+.site-main a {
+  border-bottom: thin solid;
+}
+
 .avatar {
-  border-radius: .25em;
   margin: auto;
   max-width: 100%;
+  background: #eee;
 }

@@ -1,4 +1,78 @@
 
-.resume {
-  // text-align: left;
+.resume .site-main {
+  text-align: left;
+
+  ul {
+    font-size: 90%;
+  }
+
+  h2 {
+    border-bottom: 4px solid;
+    padding-bottom: .25em;
+    padding-right: .125em;
+    display: inline-block;
+    page-break-before: always;
+  }
+
+  h4 {
+    margin-bottom: 0.5em;
+
+    a { color: $black; }
+
+    > em {
+      font-weight: normal;
+      font-size: 80%;
+      display: inline-block;
+      margin-left: 1em;
+      font-style: normal;
+      color: #666;
+    }
+    
+    + h5 {
+      font-size: 100%;
+      font-weight: normal;
+      margin: 0 0 .5em;
+    }
+  }
+
+
+}
+
+figcaption {
+  font-size: 90%;
+  margin: 0 0 1.5em;
+}
+
+figure.skills label {
+  padding: .25em .75em;
+  font-size: 75%;
+  white-space: nowrap;
+  background: #eee;
+  text-align: left;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: $max-width * 1.667) {
+  figure.skills {
+    .labels {
+      width: 0;
+      height: 38.5em;
+      margin: -4em auto -16em;
+      text-align: center;
+      transform: rotate(-90deg);
+
+      label { max-width: 1000px; }
+    }
+  }
+}
+
+.print-link {
+  display: block;
+  text-align: center;
+  margin: 3em auto -3em;
+  width: 6em;
+  background: lightgray;
+  color: dimgray;
+  font-size: 100%;
 }
