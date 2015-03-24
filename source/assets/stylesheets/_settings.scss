@@ -1,24 +1,23 @@
-
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Source+Serif+Pro);
 
-$font-size:               125% !default;
+$font-size: 100% !default;
 
-$font-family:             'Source Sans Pro', 'Helvetica Neue', sans-serif;
-$font-family-headings:    'Source Sans Pro', 'Helvetica Neue', sans-serif;
+$font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
+$font-family-headings: "Source Sans Pro", "Helvetica Neue", sans-serif;
 
-$line-height:             1.5em;
-$line-height-relative:    1.5rem;
+$line-height: 1.5em;
+$line-height-relative: 1.5rem;
 
-$color-primary:           slategray;
-$dribbble:                hotpink;
-$instagram:               steelblue;
-$lastfm:                  firebrick;
-$github:                  slategrey;
+$color-primary: slategray;
+$dribbble: hotpink;
+$instagram: steelblue;
+$lastfm: firebrick;
+$github: slategrey;
 
-$breakpoint-small:        32rem;
-$breakpoint-medium:       48rem;
-$breakpoint-large:        75rem;
+$breakpoint-small: 32rem;
+$breakpoint-medium: 48rem;
+$breakpoint-large: 75rem;
 
-$gutter:                  $line-height-relative;
-$page-margin:             $line-height-relative * 2;
-$max-width:               $breakpoint-small;
+$gutter: $line-height-relative;
+$page-margin: $line-height-relative * 2;
+$max-width: $breakpoint-small;

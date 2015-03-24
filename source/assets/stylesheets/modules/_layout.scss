@@ -1,13 +1,16 @@
-
 html {
   text-align: center;
 }
 
 a {
-  &:hover { color: black; }
-  &[onclick]:hover { cursor: pointer; }
-}
+  &:hover {
+    color: black;
+  }
 
+  &[onclick]:hover {
+    cursor: pointer;
+  }
+}
 
 .site-nav {
   text-align: center;
@@ -42,4 +45,33 @@ a {
   margin: auto;
   max-width: 100%;
   background: #eee;
+}
+
+.profile-image {
+  margin: 0 auto 4em;
+  width: 12em;
+}
+
+@media screen and (min-width: $max-width) {
+  .blurb {
+    overflow: hidden;
+
+    h3, p {
+      float: left;
+      text-align: left;
+    }
+
+    h3 {
+      margin: 0;
+      width: 40%;
+    }
+
+    p {
+      width: 60%;
+
+      span {
+        border-bottom: thin solid #eee;
+      }
+    }
+  }
 }
