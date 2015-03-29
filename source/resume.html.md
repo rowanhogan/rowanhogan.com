@@ -5,7 +5,7 @@ show_title: false
 
 ## Work
 
-#### [NetEngine](http://netengine.com.au/) _(2011-)_
+#### [NetEngine](http://netengine.com.au/) _2011--_
 
 ##### Lead Designer
 
@@ -14,7 +14,7 @@ show_title: false
 - Front-end web development
 - Ruby on Rails development
 
-#### Biscuit magazine _(2010 - 2012)_
+#### Biscuit magazine _2010--2012_
 
 ##### Designer/Developer
 
@@ -22,7 +22,7 @@ show_title: false
 - Identity design
 - Web development and system administration
 
-#### Tetrametric Creative _(2009 - 2011)_
+#### Tetrametric Creative _2009--2011_
 
 ##### Designer/Developer
 
@@ -33,12 +33,12 @@ show_title: false
 ## Volunteering
 
 
-#### [RHoK Brisbane](http://rhokbrisbane.org/) _(2013-)_
+#### [RHoK Brisbane](http://rhokbrisbane.org/) _2013--_
 
 - As a part of [RHoK Brisbane](http://rhokbrisbane.org/) (part of [Random Hacks of Kindess](http://rhok.org/)) since it's first hack in 2013, I have attended and help coordinate all of the (3 as of writing) events.
 - I have worked directly with QLD Kids, Karuna & Resonate amongst others on humanitarian projects.
 
-#### [Variety QLD](http://www.variety.org.au/qld/) _(2011)_
+#### [Variety QLD](http://www.variety.org.au/qld/) _2011_
 
 - Print & email design for ‘Heart Art Show’ Flyer.
 
@@ -46,9 +46,9 @@ show_title: false
 ## Education
 
 
-#### [QUT](http://www.qut.edu.au/) _(2008 - 2010)_
+#### [QUT](http://www.qut.edu.au/) _2008--2010_
 
-##### Bachelor of Creative Industries (Communication Design) 
+##### Bachelor of Creative Industries (Communication Design)
 
 - Completed two years of study
 - Design theory, interaction & interface design, information architecture

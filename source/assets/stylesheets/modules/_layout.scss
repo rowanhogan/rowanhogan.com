@@ -1,5 +1,6 @@
 html {
   text-align: center;
+  background: whitesmoke;
 }
 
 a {
@@ -12,9 +13,20 @@ a {
   }
 }
 
+p {
+  margin: $line-height 0;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+body.index .logo {
+  display: none;
+}
+
 .site-nav {
   text-align: center;
-  font-size: 90%;
 
   a {
     display: inline-block;
@@ -35,21 +47,76 @@ a {
       }
     }
   }
+
+  .logo {
+    float: left;
+    background: white;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media screen and (min-width: $breakpoint-small) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: .5em;
+
+      img {
+        width: 2em;
+        height: 2em;
+      }
+    }
+  }
 }
 
-.site-main a {
-  border-bottom: thin solid;
-}
+.site-main {
+  a {
+    border-bottom: thin solid;
 
-.avatar {
-  margin: auto;
-  max-width: 100%;
-  background: #eee;
+    &.button {
+      background: white;
+      color: dimgray;
+      border: thin solid lightgrey;
+      transition: none;
+
+      &:hover {
+        background: lightgrey;
+      }
+    }
+  }
 }
 
 .profile-image {
-  margin: 0 auto 4em;
   width: 12em;
+  margin: 0 auto 4em;
+  max-width: 100%;
+  background: white;
+}
+
+.footer {
+  font-size: 80%;
+}
+
+.dribbble {
+  color: $dribbble;
+}
+
+.linkedin {
+  color: $linkedin;
+}
+
+.twitter {
+  color: $twitter;
+}
+
+.lastfm {
+  color: $lastfm;
+}
+
+.github {
+  color: $github;
 }
 
 @media screen and (min-width: $max-width) {
@@ -70,7 +137,7 @@ a {
       width: 60%;
 
       span {
-        border-bottom: thin solid #eee;
+        border-bottom: thin solid lightgrey;
       }
     }
   }

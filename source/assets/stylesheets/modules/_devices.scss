@@ -1,34 +1,28 @@
 .device {
   position: relative;
-  margin: 3em auto;
+  margin: -35% auto;
   padding: 1.5em;
   border: 2px solid;
-  color: #ccc;
-  color: rgba(black, .1);
-  border-radius: .5em;
+  color: rgba(black, 0.1);
+  border-radius: 2em;
+  transform: scale(0.5);
   transition: transform .5s ease;
 
   &:before, &:after {
     content: '';
     position: absolute;
     border-radius: 50%;
-    width: 1em;
-    height: 1em;
+    width: 2em;
+    height: 2em;
     left: 50%;
-    margin-left: -.5em;
+    margin-left: -1em;
     box-sizing: border-box;
-  }
-
-  &:before {
-    bottom: .5em;
-    font-size: .75em;
     border: 2px solid;
+    background: rgba(white, 0.15);
   }
 
   &:after {
-    top: 3.25em;
-    font-size: 4px;
-    background: rgba(black, .1);
+    background-color: rgba(black, 0.1);
   }
 
   iframe {
@@ -36,81 +30,77 @@
     height: 100%;
     border: 2px solid;
     box-sizing: border-box;
+  }
 
-    @media screen and (min-width: 0) {
-      width: 200%;
-      height: 200%;
-      margin: -50%;
-      border-width: 4px;
-      box-sizing: border-box;
-      transform: scale(.5);
+  @media screen and (min-width: $breakpoint-medium) {
+    margin: -17.5% auto;
+    transform: scale(0.75);
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    display: none !important;
+    margin: 1.5em -1.5em !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: 60vh !important;
+    transform: none !important;
+    border: 0 !important;
+    overflow: hidden;
+    pointer-events: none;
+
+    &:before, &:after {
+      display: none;
+    }
+
+    &:first-of-type {
+      display: block !important;
+    }
+
+    iframe {
+      border: 0;
     }
   }
 }
 
 .tablet {
   @extend .device;
-  width: 17em;
-  height: 22em;
+  width: 768px;
+  height: 1024px;
+  padding: 4em 3em;
+  margin: -55% -35% -50%;
 
-  iframe {
-    @media screen and (min-width: 0) {
-      margin-top: -11em;
-    }
+  &:before {
+    bottom: 1em;
   }
 
-  @media screen and (min-width: 1000px) {
-    margin: auto;
-    zoom: 1.25;
-    transform: rotate(90deg);
-
-    iframe {
-      transform: rotate(-90deg) scale(.75);
-      width: 29.5em;
-      height: 23em;
-      margin: -.6em -6.25em;
-      border-width: 3px;
-    }
+  &:after {
+    top: 7em;
+    font-size: 4px;
   }
 
-  @media screen and (min-width: 1300px) {
-    font-size: 1.5em;
+  @media screen and (min-width: $breakpoint-medium) {
+    margin: -17.5% -33.333%;
   }
 }
 
 .mobile {
   @extend .device;
-  width: 12em;
-  height: 22em;
-  padding: 1.5em .75em;
-  border-radius: 1em;
-  background-image: linear-gradient(transparent 25%, rgba(0,0,0,.1) 25%, rgba(0,0,0,.1) 75%, transparent 75%);
+  width: 375px;
+  height: 667px;
+  padding: 3em 1em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0) 75%);
   background-repeat: no-repeat;
-  background-size: 1.25em .25em;
-  background-position: center .95em;
+  background-size: 2em .5em;
+  background-position: center 1.25em;
 
-  &:after { top: 2.333em; }
-
-  iframe {
-    @media screen and (min-width: 0) {
-      margin-top: -11em;
-    }
+  &:before {
+    bottom: .5em;
   }
 
-  @media screen and (min-width: 1000px) {
-    margin: auto;
-    zoom: 1.25;
-    transform: rotate(90deg);
-
-    iframe {
-      transform: rotate(-90deg) scale(.5);
-      width: 44em;
-      height: 100%;
-      margin: 0 -16em;
-    }
-  }
-
-  @media screen and (min-width: 1300px) {
-    font-size: 1.5em;
+  &:after {
+    top: 11em;
+    left: 42.5%;
+    font-size: 2px;
+    margin-left: 0;
   }
 }

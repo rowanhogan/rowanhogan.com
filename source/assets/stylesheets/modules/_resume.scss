@@ -1,33 +1,26 @@
-
 .resume .site-main {
   text-align: left;
 
-  ul {
-    font-size: 90%;
-  }
-
   h2 {
-    border-bottom: 4px solid;
-    padding-bottom: .25em;
-    padding-right: .125em;
-    display: inline-block;
-    page-break-before: always;
+    margin-bottom: 2em;
   }
 
   h4 {
     margin-bottom: 0.5em;
 
-    a { color: $black; }
+    a {
+      color: $black;
+    }
 
     > em {
-      font-weight: normal;
-      font-size: 80%;
       display: inline-block;
       margin-left: 1em;
+      font-size: 70%;
+      font-weight: normal;
       font-style: normal;
       color: #666;
     }
-    
+
     + h5 {
       font-size: 100%;
       font-weight: normal;
@@ -35,7 +28,9 @@
     }
   }
 
-
+  ul {
+    font-size: 90%;
+  }
 }
 
 figcaption {
@@ -47,7 +42,7 @@ figure.skills label {
   padding: .25em .75em;
   font-size: 75%;
   white-space: nowrap;
-  background: #eee;
+  background: lightgrey;
   text-align: left;
   max-width: 100%;
   box-sizing: border-box;
@@ -62,17 +57,15 @@ figure.skills label {
       text-align: center;
       transform: rotate(-90deg);
 
-      label { max-width: 1000px; }
+      label {
+        max-width: 1000px;
+      }
     }
   }
 }
 
 .print-link {
   display: block;
-  text-align: center;
-  margin: 3em auto -3em;
   width: 6em;
-  background: lightgray;
-  color: dimgray;
-  font-size: 100%;
+  margin: 3em auto -3em;
 }

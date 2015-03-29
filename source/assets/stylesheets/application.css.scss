@@ -1,8 +1,8 @@
-@import 'compass',
-        'compass/reset';
+@import "compass";
+@import "compass/reset";
 
-@import 'settings';
+@import "settings";
 
-@import 'terrain/terrain';
+@import "terrain/terrain";
 
-@import 'modules/*';
+@import "modules/*";
