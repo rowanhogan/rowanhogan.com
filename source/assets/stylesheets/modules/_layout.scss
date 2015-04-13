@@ -1,44 +1,27 @@
-
-%document {
-  font: #{$font-size}/#{$line-height} $font-family;
+html {
   min-height: 100%;
-  color: $color;
+  font-size: $font-size;
+  font-family: $font-family;
+  line-height: $line-height;
   background-color: $background-color;
+  color: $color;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+
+  @media screen and (min-width: $max-width * 1.25) {
+    font-size: $font-size * 1.1;
+  }
 }
 
-%container {
+.container {
   max-width: $max-width;
   margin: auto;
   padding: $padding;
   clear: both;
 
   @media screen and (max-width: $breakpoint-small) {
-    padding: $padding * .75;
+    padding: $padding * 0.75;
   }
-}
-
-html {
-  @extend %document;
-}
-
-.container {
-  @extend %container;
-}
-
-.header-nav {
-  float: right;
-
-  a {
-    float: left;
-    width: 1.75em;
-    height: 1.75em;
-    margin-left: .25em;
-    background: whitesmoke;
-    border-radius: .25em;
-  }
-
 }
 
 .main {
@@ -47,34 +30,5 @@ html {
   .container {
     position: relative;
     padding-top: 4em;
-  }
-}
-
-
-.footer {
-  clear: both;
-  background-color: whitesmoke;
-}
-
-.footer-nav a {
-  margin-right: .5em;
-}
-
-@media screen and (max-width: $breakpoint-medium) {
-  .footer-nav a { display: block; }
-}
-
-@media screen and (max-width: $breakpoint-small) {
-
-  .header { text-align: center; }
-
-  .header-nav {
-    float: none;
-
-    a {
-      float: none;
-      display: inline-block;
-      margin: 0 0.25em 1.5em;
-    }
   }
 }

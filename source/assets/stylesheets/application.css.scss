@@ -1,8 +1,6 @@
-@import 'compass',
-        'compass/reset';
+@import "compass";
+@import "compass/reset";
 
-@import 'settings';
-
-@import 'icons';
-
-@import 'modules/*';
+@import "settings";
+@import "icons";
+@import "modules/*";

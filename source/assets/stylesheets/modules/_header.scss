@@ -1,0 +1,28 @@
+.header-nav {
+  float: right;
+
+  a {
+    float: left;
+    width: 2em;
+    height: 2em;
+    margin-left: .25em;
+    background: whitesmoke;
+    border-radius: .25em;
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .header {
+    text-align: center;
+  }
+
+  .header-nav {
+    float: none;
+
+    a {
+      float: none;
+      display: inline-block;
+      margin: 0 0.25em 1.5em;
+    }
+  }
+}

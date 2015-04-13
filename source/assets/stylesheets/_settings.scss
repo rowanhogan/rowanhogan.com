@@ -1,14 +1,9 @@
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Source+Serif+Pro);
 
-// Typography
-
-@import url(http://fonts.googleapis.com/css?family=Lato|Alegreya:400italic,400);
-
-$font-size: 125%;
+$font-size: 110%;
 $line-height: 1.5em;
-$font-family: 'Alegreya', 'EB Garamond', serif;
-
-$title-font-family: "Lato", 'Open Sans', sans-serif;
-
+$font-family: "Source Serif Pro", "EB Garamond", "Georgia", serif;
+$title-font-family: "Source Sans Pro", "Open Sans", sans-serif;
 
 $color: #444;
 $link-color: slategray;
@@ -17,19 +12,14 @@ $dribbble: hotpink;
 $instagram: steelblue;
 $lastfm: firebrick;
 $github: slategrey;
-
 $background-color: mix($link-color, white, 2%);
-
 
 $padding: 2em;
 $max-width: 42em;
 
-// ------- //
-
 $button-border-width: 25em;
 $button-height: $padding;
-$button-radius: .25em;
-
+$button-radius: 0.25em;
 
 $breakpoint-medium: $max-width;
 $breakpoint-small: 600px;

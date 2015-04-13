@@ -1,0 +1,14 @@
+.footer {
+  clear: both;
+  font-family: $title-font-family;
+}
+
+.footer-nav a {
+  margin-right: .5em;
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+  .footer-nav a {
+    display: block;
+  }
+}
