@@ -3,7 +3,8 @@
   margin: -35% auto;
   padding: 1.5em;
   border: 2px solid;
-  color: rgba(black, 0.1);
+  background: white;
+  color: rgba(black, 0.15);
   border-radius: 2em;
   transform: scale(0.5);
   transition: transform .5s ease;
@@ -22,7 +23,7 @@
   }
 
   &:after {
-    background-color: rgba(black, 0.1);
+    background-color: rgba(black, 0.15);
   }
 
   iframe {

@@ -74,8 +74,8 @@ show_title: false
     <label style="width: 6em;">Web Applications</label>
     <label style="width: 6em;">jQuery</label>
     <label style="width: 5em;">Git</label>
-    <label style="width: 4em;">User Experience Design</label>
     <label style="width: 5em;">Web Design</label>
+    <label style="width: 4em;">User Experience Design</label>
     <label style="width: 4em;">Ruby</label>
     <label style="width: 4em;">CSS3</label>
   </div>

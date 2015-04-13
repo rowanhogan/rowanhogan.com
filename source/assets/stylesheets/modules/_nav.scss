@@ -1,0 +1,45 @@
+.site-nav {
+  text-align: center;
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    padding: .25em;
+
+    &.active {
+      color: black;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: .125em;
+        left: .25em;
+        right: .25em;
+        border-bottom: 2px solid;
+      }
+    }
+  }
+
+  .logo {
+    float: left;
+    background: white;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media screen and (min-width: $breakpoint-small) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: .5em;
+
+      img {
+        width: 2em;
+        height: 2em;
+      }
+    }
+  }
+}

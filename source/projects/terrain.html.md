@@ -17,17 +17,28 @@ The intitial work for the project came from a number of different projects withi
 See more about the project at [terrain.io](http://terrain.io)
 
 <style>
-  html { background: transparent; }
+  html { background: hsl(230, 100%, 95%); }
 
-  html:before {
+  html:before, html:after {
     content: '';
-    position: fixed;
-    top: 0;
-    bottom: 0;
+    position: absolute;
     left: 0;
     right: 0;
+  }
+
+  html:before {
+    top: 0;
+    height: 100vh;
     z-index: -1;
-    background: hsl(230, 100%, 90%) url(http://www.terrain.io/images/mountain.jpg) no-repeat top;
-    opacity: .25;
+    background: url(http://www.terrain.io/images/mountain.jpg) no-repeat top;
+    opacity: .1;
+  }
+
+  html:after {
+    bottom: 0;
+    height: 50vh;
+    background: -webkit-linear-gradient(hsla(230, 100%, 95%, 0), hsl(230, 100%, 95%));
+    background: linear-gradient(hsla(230, 100%, 95%, 0), hsl(230, 100%, 95%));
+    z-index: -1;
   }
 </style>

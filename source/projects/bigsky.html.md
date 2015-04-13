@@ -16,15 +16,27 @@ Find out more at [bigsky.io](https://bigsky.io)
     .map { display: none; }
   }
 
-  html { background-color: hsl(160, 50%, 80%); }
-
   .map {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     pointer-events: none;
-    opacity: .2;
+    opacity: .15;
+    height: 100vh !important;
+    overflow: hidden;
+  }
+
+  .map:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50vh !important;
+    z-index: 0;
+    background: -webkit-linear-gradient(rgba(255,255,255, 0), white);
+    background: linear-gradient(rgba(255,255,255, 0), white);
   }
 
   .layer {
