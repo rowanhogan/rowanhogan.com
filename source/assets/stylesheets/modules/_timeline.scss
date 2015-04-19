@@ -114,7 +114,8 @@
   header {
     font-size: .75em;
     border-bottom: thin solid #eee;
-    margin: 0 0 1em;
+    padding-bottom: .75em;
+    margin: 0 0 .75em;
 
     h1 {
       position: relative;
@@ -125,7 +126,7 @@
 
       &:before {
         position: absolute;
-        top: 0.0875em;
+        top: 0.1em;
         left: 0;
         width: 1em;
         text-align: center;
@@ -173,7 +174,6 @@
 @media screen and (min-width: $breakpoint-medium) {
   .timeline:before {
     content: '';
-    display: block;
     position: absolute;
     top: 0;
     left: 50%;
@@ -193,6 +193,7 @@
     &:before {
       content: '';
       content: attr(data-time);
+      display: block;
       position: absolute;
       top: 4px;
       left: auto;
