@@ -33,6 +33,11 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
+    eco (1.0.0)
+      coffee-script
+      eco-source
+      execjs
+    eco-source (1.1.0.rc.1)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -256,6 +261,7 @@ PLATFORMS
 
 DEPENDENCIES
   builder (~> 3.0)
+  eco
   middleman
   middleman-autoprefixer
   middleman-blog

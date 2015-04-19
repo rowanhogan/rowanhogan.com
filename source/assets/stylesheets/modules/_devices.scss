@@ -48,6 +48,7 @@
     border: 0 !important;
     overflow: hidden;
     pointer-events: none;
+    border-radius: 0;
 
     &:before, &:after {
       display: none;

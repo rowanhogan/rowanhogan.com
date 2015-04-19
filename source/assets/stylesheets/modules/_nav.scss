@@ -22,12 +22,15 @@
   }
 
   .logo {
-    float: left;
+    display: block;
     background: white;
+    margin: 0 auto 1.5em;
+    border: thin solid #ddd;
+    width: 2em;
+    height: 2em;
 
     img {
-      width: 24px;
-      height: 24px;
+      max-width: 100%;
     }
 
     @media screen and (min-width: $breakpoint-small) {
@@ -35,11 +38,7 @@
       top: 0;
       left: 0;
       padding: .5em;
-
-      img {
-        width: 2em;
-        height: 2em;
-      }
+      border-width: 0 thin thin 0;
     }
   }
 }

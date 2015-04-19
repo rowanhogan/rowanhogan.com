@@ -20,11 +20,12 @@ h1 {
   font-weight: 600;
 }
 
-body.index .logo {
-  display: none;
-}
-
 .site-main {
+  > .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   a {
     border-bottom: thin solid;
 

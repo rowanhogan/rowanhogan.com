@@ -8,7 +8,7 @@
     %meta{ name: "description", content: "Full-stack designer from Brisbane, Australia." }
     %meta{ name: "viewport", content: "width=device-width, minimal-ui" }
 
-    = favicon_tag "favicon.png?2sdfsd34"
+    = favicon_tag "favicon.ico"
     = stylesheet_link_tag "application"
     = stylesheet_link_tag "print", media: 'print'
 
@@ -22,7 +22,8 @@
   %body{ class: page_classes }
     %header.site-header
       .container
-        %nav.site-nav= partial "layouts/nav"
+        %nav.site-nav
+          = partial "layouts/nav"
 
     %section.site-main
       .container
@@ -33,7 +34,8 @@
 
     %footer.site-footer
       .container
-        %nav.site-nav= partial "layouts/social"
+        %nav.site-nav
+          = partial "layouts/social"
 
     = javascript_include_tag "application"
 

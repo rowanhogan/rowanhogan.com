@@ -1,0 +1,14 @@
+<% date = new Date(@created_at).getTime() %>
+
+<li class="timeline-list-item timeline-github" data-time="<%= date %>">
+  <header>
+    <label class="date"><%= moment(date).format('DD MMMM YYYY'); %></label>
+    <h1 class="icon-github">
+      <a href="http://github.com/<%= @repo.name %>">Github</a>
+    </h1>
+  </header>
+  <article>
+    <a href="<%= @actor.url %>"><%= @actor.login %></a> pushed to <a href="http://github.com/<%= @repo.name %>"><%= @repo.name %></a>
+  </article>
+
+</li>

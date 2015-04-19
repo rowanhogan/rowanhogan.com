@@ -17,8 +17,6 @@ The intitial work for the project came from a number of different projects withi
 See more about the project at [terrain.io](http://terrain.io)
 
 <style>
-  html { background: hsl(230, 100%, 95%); }
-
   html:before, html:after {
     content: '';
     position: absolute;
@@ -37,8 +35,8 @@ See more about the project at [terrain.io](http://terrain.io)
   html:after {
     bottom: 0;
     height: 50vh;
-    background: -webkit-linear-gradient(hsla(230, 100%, 95%, 0), hsl(230, 100%, 95%));
-    background: linear-gradient(hsla(230, 100%, 95%, 0), hsl(230, 100%, 95%));
+    background: -webkit-linear-gradient(hsla(230, 100%, 95%, 0), white);
+    background: linear-gradient(hsla(230, 100%, 95%, 0), white);
     z-index: -1;
   }
 </style>
