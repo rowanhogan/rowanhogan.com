@@ -1,0 +1,17 @@
+language: ruby
+
+rvm:
+  - 2.1.2
+
+branches:
+  only:
+    - master
+
+cache:
+  bundler: true
+
+notifications:
+  email: false
+
+script:
+  - "bundle exec middleman deploy --build-before"
