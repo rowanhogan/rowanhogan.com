@@ -8,6 +8,7 @@ set :images_dir, 'assets/images'
 set :js_dir,     'assets/javascripts'
 
 sprockets.append_path File.join "#{root}", "source/assets/bower_components"
+ignore 'assets/bower_components/*'
 
 activate :autoprefixer
 activate :directory_indexes
