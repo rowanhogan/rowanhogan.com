@@ -1,0 +1,122 @@
+.device {
+  position: relative;
+  margin: -35% auto;
+  padding: 1.5em;
+  border: 2px solid;
+  background: white;
+  color: rgba(black, 0.15);
+  border-radius: 2em;
+  transform: scale(0.5);
+  transition: transform .5s ease;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    left: 50%;
+    margin-left: -1em;
+    box-sizing: border-box;
+    border: 2px solid;
+    background: rgba(white, 0.15);
+  }
+
+  &:after {
+    background-color: rgba(black, 0.15);
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: 2px solid;
+    box-sizing: border-box;
+  }
+
+  @media screen and (min-width: $breakpoint-medium) {
+    margin: -17.5% auto;
+    transform: scale(0.75);
+
+    &.landscape {
+      margin: -50% -34%;
+      transform: rotate(90deg) scale(0.6);
+
+      iframe {
+        transform: rotate(-90deg);
+        height: 75%;
+        width: 135%;
+        position: relative;
+        left: -17.5%;
+        bottom: -12%;
+      }
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    display: none !important;
+    margin: 1.5em -1.5em !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: 60vh !important;
+    transform: none !important;
+    border: 0 !important;
+    overflow: hidden;
+    pointer-events: none;
+    border-radius: 0;
+
+    &:before, &:after {
+      display: none;
+    }
+
+    &:first-of-type {
+      display: block !important;
+    }
+
+    iframe {
+      border: 0;
+    }
+  }
+}
+
+.tablet {
+  @extend .device;
+  width: 768px;
+  height: 1024px;
+  padding: 4em 3em;
+  margin: -55% -35% -50%;
+
+  &:before {
+    bottom: 1em;
+  }
+
+  &:after {
+    top: 7em;
+    font-size: 4px;
+  }
+
+  @media screen and (min-width: $breakpoint-medium) {
+    margin: -17.5% -33.333%;
+  }
+}
+
+.mobile {
+  @extend .device;
+  width: 375px;
+  height: 667px;
+  padding: 3em 1em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0) 75%);
+  background-repeat: no-repeat;
+  background-size: 2em .5em;
+  background-position: center 1.25em;
+
+  &:before {
+    bottom: .5em;
+  }
+
+  &:after {
+    top: 11em;
+    left: 42.5%;
+    font-size: 2px;
+    margin-left: 0;
+  }
+}

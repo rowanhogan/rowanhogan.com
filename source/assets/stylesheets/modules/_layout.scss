@@ -1,34 +1,103 @@
 html {
-  min-height: 100%;
-  font-size: $font-size;
-  font-family: $font-family;
-  line-height: $line-height;
-  background-color: $background-color;
-  color: $color;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  text-align: center;
 
-  @media screen and (min-width: $max-width * 1.25) {
-    font-size: $font-size * 1.1;
+  @media screen and (min-width: $max-width) {
+    text-align: left;
   }
 }
 
-.container {
-  max-width: $max-width;
-  margin: auto;
-  padding: $padding;
-  clear: both;
+body.index {
+  text-align: center;
+}
 
-  @media screen and (max-width: $breakpoint-small) {
-    padding: $padding * 0.75;
+h1 {
+  font-weight: 600;
+}
+
+p {
+  margin: $line-height 0;
+}
+
+a {
+  &:hover {
+    color: black;
+  }
+
+  &[onclick]:hover {
+    cursor: pointer;
   }
 }
 
-.main {
-  min-height: 20em;
+.site-main {
+  > .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
-  .container {
-    position: relative;
-    padding-top: 4em;
+  a {
+    border-bottom: thin solid;
+
+    &.button {
+      background: white;
+      color: dimgray;
+      border: thin solid lightgrey;
+      transition: none;
+
+      &:hover {
+        background: lightgrey;
+      }
+    }
+  }
+}
+
+.profile-image {
+  width: 12em;
+  margin: 0 auto 4em;
+  max-width: 100%;
+  background: #eee;
+}
+
+.footer {
+  font-size: 80%;
+}
+
+.dribbble {
+  color: $dribbble;
+}
+
+.linkedin {
+  color: $linkedin;
+}
+
+.twitter {
+  color: $twitter;
+}
+
+.lastfm {
+  color: $lastfm;
+}
+
+.github {
+  color: $github;
+}
+
+@media screen and (min-width: $max-width) {
+  .blurb {
+    overflow: hidden;
+
+    h3, p {
+      float: left;
+      text-align: left;
+    }
+
+    h3 {
+      margin: 0;
+      width: 40%;
+    }
+
+    p {
+      margin: 0;
+      width: 60%;
+    }
   }
 }

@@ -1,25 +1,24 @@
-@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Source+Serif+Pro);
+$font-size: 100% !default;
 
-$font-size: 110%;
+$font-family: "franklin-gothic-urw", "Source Sans Pro", "Helvetica Neue", sans-serif;
+$font-family-headings: $font-family;
+
 $line-height: 1.5em;
-$font-family: "Source Serif Pro", "EB Garamond", "Georgia", serif;
-$title-font-family: "Source Sans Pro", "Open Sans", sans-serif;
+$line-height-relative: 1.5rem;
 
-$color: #444;
-$link-color: slategray;
+$color-primary: slategray;
 
 $dribbble: hotpink;
+$github: slategrey;
 $instagram: steelblue;
 $lastfm: firebrick;
-$github: slategrey;
-$background-color: mix($link-color, white, 2%);
+$linkedin: steelblue;
+$twitter: dodgerblue;
 
-$padding: 2em;
-$max-width: 42em;
+$breakpoint-small: 32rem;
+$breakpoint-medium: 769px;
+$breakpoint-large: 75rem;
 
-$button-border-width: 25em;
-$button-height: $padding;
-$button-radius: 0.25em;
-
-$breakpoint-medium: $max-width;
-$breakpoint-small: 600px;
+$gutter: $line-height-relative;
+$page-margin: $line-height-relative * 2;
+$max-width: $breakpoint-small;

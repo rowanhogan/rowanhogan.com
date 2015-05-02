@@ -1,8 +1,11 @@
-#= require_directory ./vendor
+#= require jquery/dist/jquery
+#= require fastclick/lib/fastclick
+#= require moment/moment
+#= require tinysort/dist/tinysort
 #= require_tree .
 
 sortTimeline = ->
-  $('li', '#timeline').tsort
+  tinysort '#timeline > li',
     data: 'time'
     order: 'desc'
 
@@ -16,19 +19,19 @@ sortTimeline = ->
     else
       data = data.data
 
-    count = data.length
+    if data
+      count = data.length
 
-    # window[type] = data
+      $.each data, (i, item) ->
+        count--
 
-    $.each data, (i, item) ->
-      count--
+        unless type is "github" and item.type isnt "PushEvent"
+          $('#timeline').append JST["templates/#{type}"](item)
 
-      unless type is "github" and item.type isnt "PushEvent"
-        $('#timeline').append JST["templates/#{type}"](item)
-
-      if count is 0
-        sortTimeline()
-        $("#timeline-list-labels").append("<label class='list-label icon-#{type}' data-type='#{type}'></label>")
+        if count is 0
+          sortTimeline()
+          label = $("<label class='list-label icon-#{type}' data-type='#{type}'></label>")
+          $("#timeline-list-labels").append(label)
 
 
 @initTimeline = ->
@@ -39,27 +42,13 @@ sortTimeline = ->
   retrieveItems("lastfm", "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rehogan&api_key=ef147845c58771a584366acb1089d962&format=json&callback=?")
   retrieveItems("instagram", "https://api.instagram.com/v1/users/682546/media/recent/?access_token=#{$('#instagram').data('token')}&callback=?")
 
+
 $ ->
   new FastClick(document.body)
-  console?.log "G'Day! :) Please, feel free to take a look around..."
   $('html').removeClass('no-js')
+  console?.log "G'Day! :) Please, feel free to take a look around... The source code for this site can be found at https://github.com/rowanhogan/rowanhogan.com"
 
-  initTimeline()
-
-
-$(document).on 'scroll', (e) ->
-  y_pos = $(window).scrollTop()
-
-  if y_pos > $('.header').outerHeight()
-    $("#timeline-list-labels").addClass('fixed')
-    $('body').append('<a href="#" id="top" class="go-to-top">Top</a>') unless $('#top').length
-  else
-    $("#timeline-list-labels").removeClass('fixed')
-    $('#top').remove()
-
-$(document).on 'click', '#top', (e) ->
-  e.preventDefault()
-  $(window).scrollTop(0)
+  initTimeline() if $('#timeline').length
 
 
 $(document).off 'click', '#timeline-list-labels label'

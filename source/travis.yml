@@ -1,0 +1,19 @@
+language: ruby
+
+rvm:
+  - 2.1.3
+
+cache:
+  bundler: true
+
+branches:
+  only:
+    - master
+
+before_script:
+  - 'npm install -g grunt-cli'
+  - 'npm install -g bower'
+  - 'bower install -f'
+
+script:
+  - 'bundle exec middleman build && bundle exec middleman s3_sync'

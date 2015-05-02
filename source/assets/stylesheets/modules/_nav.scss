@@ -1,0 +1,51 @@
+.logo {
+  display: block;
+  background: white;
+  margin: 0 auto 1.5em;
+  background: #eee;
+  padding: .5em;
+  width: 2em;
+  height: 2em;
+
+  img {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: $breakpoint-small) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 0 1px rgba(black, 0.15);
+  }
+}
+
+.site-nav {
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    padding: .25em;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &.active {
+      color: black;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: .125em;
+        left: .25em;
+        right: .25em;
+        border-bottom: 2px solid;
+      }
+
+      &:first-child:before {
+        left: 0;
+      }
+    }
+  }
+}
