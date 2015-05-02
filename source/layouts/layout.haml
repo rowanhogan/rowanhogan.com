@@ -22,14 +22,14 @@
   %body{ class: page_classes }
     %header.site-header
       .container
+        - unless page_classes === 'index'
+          = link_to image_tag("logo.svg"), '/', class: 'logo'
+
         %nav.site-nav
           = partial "layouts/nav"
 
     %section.site-main
       .container
-        %h1.page-title{ style: ("display: none" if data.page.show_title == false) }
-          = data.page.title
-
         = yield
 
     %footer.site-footer

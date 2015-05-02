@@ -2,11 +2,15 @@
 title: Big Sky
 ---
 
+# Big Sky
+
 [Big Sky](https://bigsky.io) is a platform to help anyone easily report and share their geographic data. You can bring your own custom data or use an integration such as Google Analytics or Facebook to create useful and beautiful reports.
 
 <div class="mobile"><iframe src="//bigsky.io/maps/503f45d" frameborder="0"></iframe></div>
 
-<div class="tablet"><iframe src="//bigsky.io/maps/fa9156e5b9694d1cd9bbe55fe3b7ef19" frameborder="0"></iframe></div>
+The examples on this page make use of open data from the QLD Government.
+
+<div class="tablet landscape"><iframe src="//bigsky.io/maps/fa9156e5b9694d1cd9bbe55fe3b7ef19" frameborder="0"></iframe></div>
 
 Find out more at [bigsky.io](https://bigsky.io)
 

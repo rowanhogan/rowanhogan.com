@@ -1,5 +1,21 @@
 html {
   text-align: center;
+
+  @media screen and (min-width: $max-width) {
+    text-align: left;
+  }
+}
+
+body.index {
+  text-align: center;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+p {
+  margin: $line-height 0;
 }
 
 a {
@@ -10,14 +26,6 @@ a {
   &[onclick]:hover {
     cursor: pointer;
   }
-}
-
-p {
-  margin: $line-height 0;
-}
-
-h1 {
-  font-weight: 600;
 }
 
 .site-main {
@@ -46,7 +54,7 @@ h1 {
   width: 12em;
   margin: 0 auto 4em;
   max-width: 100%;
-  background: whitesmoke;
+  background: #eee;
 }
 
 .footer {

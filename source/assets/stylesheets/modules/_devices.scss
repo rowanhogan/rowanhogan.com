@@ -36,6 +36,20 @@
   @media screen and (min-width: $breakpoint-medium) {
     margin: -17.5% auto;
     transform: scale(0.75);
+
+    &.landscape {
+      margin: -50% -34%;
+      transform: rotate(90deg) scale(0.6);
+
+      iframe {
+        transform: rotate(-90deg);
+        height: 75%;
+        width: 135%;
+        position: relative;
+        left: -17.5%;
+        bottom: -12%;
+      }
+    }
   }
 
   @media screen and (max-width: $breakpoint-small) {

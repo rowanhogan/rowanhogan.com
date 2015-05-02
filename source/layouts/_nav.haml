@@ -1,9 +1,4 @@
-
-- unless page_classes === 'index'
-  = link_to image_tag("logo.svg"), '/', class: 'logo'
-
 = menu_link 'Feed', 'feed'
 = menu_link 'Projects', 'projects'
 = menu_link 'R&eacute;sum&eacute;', 'resume'
-
-= link_to "Contact", "https://twitter.com/intent/tweet?text=G%27day%20%40rowanhogan", target: "_blank"
+= menu_link 'Contact', 'contact'

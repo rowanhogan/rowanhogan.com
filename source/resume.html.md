@@ -1,6 +1,5 @@
 ---
 title: Rèsumè
-show_title: false
 ---
 
 ## Work
@@ -80,6 +79,3 @@ show_title: false
     <label style="width: 4em;">CSS3</label>
   </div>
 </figure>
-
-
-<a class="button print-link" onclick="window.print()">Print</a>
