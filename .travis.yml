@@ -14,8 +14,6 @@ before_script:
   - git remote set-url origin https://$GH_TOKEN@github.com/rowanhogan/rowanhogan.com.git
   - npm install -g bower
   - bower install -f
-script:
-  - bundle exec middleman deploy --build-before
-global:
-  env:
-    secure: T8W4aVTL83K5ri0UCfwo1R4kFKHrZ8NWauDvbeOaoFM25ZJQD8VMOeH5LU1LwCj5Liy47BqU83iY7xgPBhY4durA6ihOtU54JTHtrvqbOG/9IlqPOyq2Rb7oSB3a6UAbbNizkXtH4REjk+AUrvhmVRndG38K+wo6c5NiJZ9Q5UM=
+  - bundle exec middleman build
+after_success:
+  - bundle exec middleman deploy
