@@ -14,4 +14,6 @@ notifications:
   email: false
 
 script:
+  - 'npm install -g bower'
+  - 'bower install -f'
   - "bundle exec middleman deploy --build-before"
