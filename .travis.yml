@@ -1,21 +1,20 @@
 language: ruby
-
 rvm:
   - 2.1.2
-
 branches:
   only:
     - master
-
 cache:
   bundler: true
-
 notifications:
   email: false
-
-script:
+before_script:
+  - "git config --global user.email ${GH_EMAIL}"
+  - "git remote add $GH_REMOTE https://${GH_TOKEN}@github.com/rowanhogan/rowanhogan.com.git"
   - 'npm install -g bower'
   - 'bower install -f'
-  - 'git config --global user.email "test@example.com"'
-  - 'git config --global user.name "Travis Build"'
-  - "bundle exec middleman deploy --build-before"
+script:
+  - bundle exec middleman deploy --build-before
+global:
+  env:
+    secure: h13/gDm+rl5+B+vAHG33UzBvd5rR16UnhvHeWItTZ+zngWb1+7Z+CGFA/+ABZGbWS2QfdyBiPUJg8+gKtygPe3xWpcYfiKITEtNCDIjA85OpabVq4qXdK9yeYJtrzE0QRyxqGvQ+J7PMgpIJwYkRQRYWKZBs83V65FkLx5OhzB0=
