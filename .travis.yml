@@ -9,12 +9,13 @@ cache:
 notifications:
   email: false
 before_script:
-  - "git config --global user.email ${GH_EMAIL}"
-  - "git remote add $GH_REMOTE https://${GH_TOKEN}@github.com/rowanhogan/rowanhogan.com.git"
-  - 'npm install -g bower'
-  - 'bower install -f'
+  - git config --global user.email $GH_EMAIL
+  - git config --global user.name $GH_USERNAME
+  - git remote add origin https://$GH_TOKEN@github.com/rowanhogan/rowanhogan.com.git
+  - npm install -g bower
+  - bower install -f
 script:
   - bundle exec middleman deploy --build-before
 global:
   env:
-    secure: h13/gDm+rl5+B+vAHG33UzBvd5rR16UnhvHeWItTZ+zngWb1+7Z+CGFA/+ABZGbWS2QfdyBiPUJg8+gKtygPe3xWpcYfiKITEtNCDIjA85OpabVq4qXdK9yeYJtrzE0QRyxqGvQ+J7PMgpIJwYkRQRYWKZBs83V65FkLx5OhzB0=
+    secure: T8W4aVTL83K5ri0UCfwo1R4kFKHrZ8NWauDvbeOaoFM25ZJQD8VMOeH5LU1LwCj5Liy47BqU83iY7xgPBhY4durA6ihOtU54JTHtrvqbOG/9IlqPOyq2Rb7oSB3a6UAbbNizkXtH4REjk+AUrvhmVRndG38K+wo6c5NiJZ9Q5UM=
