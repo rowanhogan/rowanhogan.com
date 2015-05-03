@@ -1,16 +1,10 @@
 prose:
-  rooturl: 'source/blog'
+  rooturl: 'source'
   media: 'source/assets/images'
+  ignore: ["sitemap.xml.erb", "CNAME", "robots.txt", "index.html.haml"]
   metadata:
-    source/blog:
+    source:
       - name: "title"
         field:
           element: "text"
           label: "Title"
-          value: ""
-      - name: "tags"
-        field:
-          element: "text"
-          label: "Tags"
-          placeholder: "Comma separated (e.g. 'ruby, git')"
-          value: ""
