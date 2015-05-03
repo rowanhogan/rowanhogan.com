@@ -80,6 +80,32 @@
   a {
     border: 0;
   }
+
+  &.loading {
+    min-height: 4em;
+    opacity: .5;
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1em;
+      height: 1em;
+      font-size: 24px;
+      border: 2px solid transparent;
+      border-right-color: inherit;
+      border-bottom-color: inherit;
+      border-radius: 50%;
+      box-sizing: border-box;
+      margin-left: -.5em;
+      animation: rotation .75s infinite linear;
+    }
+  }
 }
 
 .icon-dribbble, .icon-dribbble a {
@@ -245,4 +271,14 @@
   display: inline-block;
   color: seagreen;
   font-size: .75em;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
 }
