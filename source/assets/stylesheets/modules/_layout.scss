@@ -1,13 +1,18 @@
 html {
-  text-align: center;
-
-  @media screen and (min-width: $max-width) {
-    text-align: left;
-  }
+  color: #444;
 }
 
-body.index {
-  text-align: center;
+body {
+  min-height: 100vh;
+  transition: all .2s ease-in-out;
+
+  &.index {
+    text-align: center;
+
+    .site-nav {
+      text-align: center;
+    }
+  }
 }
 
 h1 {
@@ -18,12 +23,10 @@ p {
   margin: $line-height 0;
 }
 
-a {
-  &:hover {
-    color: black;
-  }
+a:hover {
+  color: black;
 
-  &[onclick]:hover {
+  &[onclick] {
     cursor: pointer;
   }
 }
@@ -61,24 +64,23 @@ a {
   font-size: 80%;
 }
 
-.dribbble {
-  color: $dribbble;
-}
+@each $site, $color in $social {
+  a.#{$site} {
+    color: $color;
+  }
 
-.linkedin {
-  color: $linkedin;
-}
+  body.#{$site} {
+    background-color: $color;
+    color: white;
 
-.twitter {
-  color: $twitter;
-}
+    a {
+      color: mix(white, $color, 75%);
 
-.lastfm {
-  color: $lastfm;
-}
-
-.github {
-  color: $github;
+      &.#{$site} {
+        color: white;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: $max-width) {

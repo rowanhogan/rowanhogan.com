@@ -61,19 +61,19 @@ title: Rèsumè
   <figcaption>According to endorsements from others on <a href="http://au.linkedin.com/in/rowanhogan#background-skills" target="_blank">LinkedIn</a></figcaption>
 
   <div class="labels">
-    <label style="width: 18em;">Front-end</label>
-    <label style="width: 17em;">User Interface Design</label>
-    <label style="width: 13em;">SASS</label>
-    <label style="width: 10em;">JavaScript</label>
+    <label style="width: 19em;">Front-end</label>
+    <label style="width: 18em;">User Interface Design</label>
+    <label style="width: 14em;">SASS</label>
+    <label style="width: 11em;">JavaScript</label>
+    <label style="width: 10em;">Web Development</label>
     <label style="width: 9em;">Ruby on Rails</label>
     <label style="width: 9em;">HTML 5</label>
     <label style="width: 9em;">HAML</label>
     <label style="width: 8em;">CoffeeScript</label>
-    <label style="width: 8em;">Web Development</label>
+    <label style="width: 7em;">jQuery</label>
     <label style="width: 6em;">Web Applications</label>
-    <label style="width: 6em;">jQuery</label>
-    <label style="width: 5em;">Git</label>
     <label style="width: 5em;">Web Design</label>
+    <label style="width: 5em;">Git</label>
     <label style="width: 4em;">User Experience Design</label>
     <label style="width: 4em;">Ruby</label>
     <label style="width: 4em;">CSS3</label>

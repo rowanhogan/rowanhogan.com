@@ -2,25 +2,32 @@
   display: block;
   background: white;
   margin: 0 auto 1.5em;
-  background: #eee;
+  background: white;
   padding: .5em;
   width: 2em;
   height: 2em;
+  transition: all .25s ease;
 
   img {
     max-width: 100%;
+  }
+
+  &:hover {
+    font-size: 1.125em;
+    box-shadow: 1px 1px 2px 1px rgba(black, 0.125);
   }
 
   @media screen and (min-width: $breakpoint-small) {
     position: fixed;
     top: 0;
     left: 0;
-    background: white;
     box-shadow: 0 0 0 1px rgba(black, 0.15);
   }
 }
 
 .site-nav {
+  text-align: center;
+
   a {
     display: inline-block;
     vertical-align: middle;
@@ -30,7 +37,7 @@
       padding-left: 0;
     }
 
-    &.active {
+    &:hover, &.active {
       color: black;
       position: relative;
 
@@ -47,5 +54,9 @@
         left: 0;
       }
     }
+  }
+
+  @media screen and (min-width: $max-width) {
+    text-align: left;
   }
 }

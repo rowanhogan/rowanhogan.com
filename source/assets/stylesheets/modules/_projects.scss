@@ -1,0 +1,53 @@
+// body {
+//   @each $project, $color in $projects {
+//     &.#{$project} {
+//       background-color: $color;
+//       color: mix(black, $color);
+
+//       a {
+//         color: mix(black, $color, 75%);
+//       }
+//     }
+//   }
+// }
+
+@media screen and (max-width: $breakpoint-medium) {
+  @each $project, $color in $projects {
+    body.projects_#{$project} {
+
+      .tablet {
+        background-image: url("/assets/images/projects/#{$project}-tablet.jpg");
+      }
+
+      .mobile {
+        background-image: url("/assets/images/projects/#{$project}-mobile.jpg");
+      }
+    }
+  }
+}
+
+a.featured {
+  position: relative;
+  font-weight: bold;
+  border-bottom-style: dotted;
+
+  &:before, &:before {
+    content: 'Featured';
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    line-height: 1;
+    padding: .5em;
+    background: rgba(black, 0.5);
+    color: white;
+    margin-top: -.25em;
+    transition: all .1s ease;
+  }
+
+  &:hover:before {
+    font-size: 70%;
+    top: -100%;
+    right: 100%;
+  }
+}
