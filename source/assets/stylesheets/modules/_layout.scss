@@ -5,14 +5,6 @@ html {
 body {
   min-height: 100vh;
   transition: all .2s ease-in-out;
-
-  &.index {
-    text-align: center;
-
-    .site-nav {
-      text-align: center;
-    }
-  }
 }
 
 h1 {
@@ -57,7 +49,6 @@ a:hover {
   width: 12em;
   margin: 0 auto 4em;
   max-width: 100%;
-  background: #eee;
 }
 
 .footer {
@@ -88,17 +79,18 @@ a:hover {
     overflow: hidden;
 
     h3, p {
-      float: left;
       text-align: left;
     }
 
     h3 {
+      float: left;
       margin: 0;
       width: 40%;
     }
 
     p {
-      margin: 0;
+      float: right;
+      margin: 0 0 .5em;
       width: 60%;
     }
   }
