@@ -6,7 +6,8 @@ $font-family-headings: $font-family;
 $line-height: 1.5em;
 $line-height-relative: 1.5rem;
 
-$color-primary: black;
+$color-primary: #333;
+$color-secondary: oldlace;
 
 $dribbble: hotpink;
 $github: slategrey;
@@ -15,7 +16,7 @@ $lastfm: firebrick;
 $linkedin: steelblue;
 $twitter: dodgerblue;
 
-$breakpoint-small: 32rem;
+$breakpoint-small: 42rem;
 $breakpoint-medium: 769px;
 $breakpoint-large: 75rem;
 
@@ -23,6 +24,21 @@ $gutter: $line-height-relative;
 $page-margin: $line-height-relative * 2;
 $max-width: $breakpoint-small;
 
-$social: ("dribbble", $dribbble), ("github", $github), ("lastfm", $lastfm), ("linkedin", $linkedin), ("twitter", $twitter);
+$breakpoint-mobile: $max-width * .55;
 
-$projects: ("ausbuild", hsl(31, 90%, 85%)), ("bigsky", hsl(150, 75%, 90%)), ("concierge", hsl(200, 75%, 90%)), ("cricket-scores", hsl(0, 85%, 90%)), ("karuna", hsl(335, 95%, 90%)), ("nature-qld", hsl(110, 100%, 90%)), ("rhokbrisbane", hsl(205, 70%, 90%)), ("scout", hsl(200, 75%, 90%)), ("terrain", hsl(240, 100%, 90%)), ("trigger", hsl(200, 75%, 90%));
+$colours: ("dribbble", $dribbble),
+          ("github", $github),
+          ("lastfm", $lastfm),
+          ("linkedin", $linkedin),
+          ("twitter", $twitter);
+
+$projects: ("ausbuild", hsl(31, 90%, 85%)),
+           ("bigsky", hsl(150, 75%, 90%)),
+           ("concierge", hsl(200, 75%, 90%)),
+           ("cricket-scores", hsl(0, 85%, 90%)),
+           ("karuna", hsl(335, 95%, 90%)),
+           ("nature-qld", hsl(110, 100%, 90%)),
+           ("rhokbrisbane", hsl(205, 70%, 90%)),
+           ("scout", hsl(200, 75%, 90%)),
+           ("terrain", hsl(240, 100%, 90%)),
+           ("trigger", hsl(200, 75%, 90%));

@@ -19,26 +19,18 @@ The intitial work for the project came from a number of different projects withi
 See more about the project at [terrain.io](http://terrain.io)
 
 <style>
-  html:before, html:after {
+  html:after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-  }
-
-  html:before {
     top: 0;
     height: 100vh;
     z-index: -1;
-    background: url(http://www.terrain.io/images/mountain.jpg) no-repeat top;
-    opacity: .1;
+    opacity: .15;
+    background:  no-repeat top;
+    background-image: linear-gradient(hsla(230, 100%, 95%, 0) 75%, white),
+                      url(http://www.terrain.io/images/mountain.jpg);
   }
 
-  html:after {
-    bottom: 0;
-    height: 50vh;
-    background: -webkit-linear-gradient(hsla(230, 100%, 95%, 0), white);
-    background: linear-gradient(hsla(230, 100%, 95%, 0), white);
-    z-index: -1;
-  }
 </style>

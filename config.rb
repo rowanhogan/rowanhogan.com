@@ -38,7 +38,7 @@ helpers do
     elsif page_classes == 'index' && name == 'Home'
       klass = 'active'
     end
-    link_to name.capitalize, "/#{link}", class: klass
+    link_to name, "/#{link}", class: klass
   end
 end
 
