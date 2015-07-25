@@ -4,11 +4,8 @@ colorInRange = (min, max) ->
 changeColor = ->
   color = "hsl(#{colorInRange(0, 359)}, 100%, 85%)"
 
-  document.styleSheets[0].addRule('body:before',"border-left-color: #{color}");
-  document.styleSheets[0].insertRule("body::before { border-left-color: #{color}; }", 0);
-
-  document.styleSheets[0].addRule('body:before',"border-top-color: #{color}");
-  document.styleSheets[0].insertRule("body::before { border-top-color: #{color}; }", 0);
+  document.styleSheets[0].addRule('body:before',"border-color: #{color}");
+  document.styleSheets[0].insertRule("body::before { border-color: #{color}; }", 0);
 
 $ ->
   classes = [
@@ -44,4 +41,10 @@ $ ->
       setInterval (->
         changeColor()
       ), 3000
-    ), 5000
+    ), 3000
+
+  $(window).on 'scroll', ->
+    document.styleSheets[0].addRule('body:before',"position: absolute");
+    document.styleSheets[0].insertRule("body::before { position: absolute; }", 0);
+
+

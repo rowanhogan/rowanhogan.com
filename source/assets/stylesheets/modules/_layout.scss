@@ -13,30 +13,49 @@ body {
     top: 0;
     left: 0;
     pointer-events: none;
-    border: solid transparent;
+    border: solid $color-secondary;
     border-width: 50vh 50vw;
-    border-left-color: $color-secondary;
-    border-top-color: $color-secondary;
+    border-bottom-color: transparent !important;
+    border-right-color: transparent !important;
     z-index: -1;
     transition: border-color 3s ease;
+
+    @media (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+      border-width: 480px 384px;
+    }
+
+    @media (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+      border-width: 384px 480px;
+    }
+
+  }
+  @media (max-device-width: 700px) {
+    overflow: hidden;
+    max-width: 100%;
+    min-height: 2em;
+
+    &:before {
+      position: fixed;
+      border-width: 44.5vh 50vw;
+    }
   }
 
   &.leaving {
-    // &:before {
-    //   content: '';
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 50%;
-    //   width: 1em;
-    //   height: 1em;
-    //   font-size: 60px;
-    //   border: 3px solid transparent;
-    //   border-right-color: #ddd;
-    //   border-radius: 50%;
-    //   box-sizing: border-box;
-    //   margin: -.5em;
-    //   animation: rotation .75s infinite linear;
-    // }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1em;
+      height: 1em;
+      font-size: 60px;
+      border: 3px solid transparent;
+      border-right-color: #ddd;
+      border-radius: 50%;
+      box-sizing: border-box;
+      margin: -.5em;
+      animation: rotation .75s infinite linear;
+    }
 
     > * {
       animation: fadeOut .5s ease forwards;
