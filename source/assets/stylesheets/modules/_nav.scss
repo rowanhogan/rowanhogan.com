@@ -19,6 +19,10 @@
     padding: .25em;
     transition: none;
 
+    @media (min-width: $breakpoint-medium) {
+      padding: .25em .5em;
+    }
+
     &:first-child {
       padding-left: 0;
     }

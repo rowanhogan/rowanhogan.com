@@ -6,6 +6,9 @@ gem 'middleman-blog'
 gem 'middleman-deploy'
 gem 'middleman-livereload'
 gem 'middleman-syntax'
+
+
 gem 'builder', '~> 3.0'
-gem "eco"
+gem 'eco'
+gem 'nokogiri'
 gem 'redcarpet'

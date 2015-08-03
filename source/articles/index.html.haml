@@ -1,0 +1,20 @@
+---
+title: Articles
+---
+
+%ul.blog-list.no-dot
+  - blog.articles.each do |article|
+    %li
+      %h3= link_to article.title, article.url
+
+      -#
+        .post-meta
+          %em.datetext= article.date.strftime("%e %B %Y")
+
+      - if article.metadata[:page]['feature_image']
+        %img{ src: "#{article.metadata[:page]['feature_image']}" }
+
+      .post-summary
+        = article.summary
+
+= link_to 'Back to main page', '/'

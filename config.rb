@@ -19,8 +19,8 @@ activate :blog do |blog|
   blog.layout = "layouts/blog"
   blog.page_link = "p:num"
   blog.paginate = true
-  blog.per_page = 20
-  blog.permalink = ":title.html"
+  blog.per_page = 5
+  blog.permalink = ":title"
   blog.prefix = "articles"
   blog.summary_length    = 200
   blog.summary_separator = /(READMORE)/

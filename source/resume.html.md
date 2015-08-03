@@ -9,7 +9,8 @@ title: Rèsumè
 ##### Lead Designer
 
 - UI & Interface Design
-- Project & client management. Project planning & estimation
+- Project & client management
+- Project planning & estimation
 - Front-end web development
 - Ruby on Rails development
 
