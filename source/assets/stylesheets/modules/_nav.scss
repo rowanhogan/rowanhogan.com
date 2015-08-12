@@ -19,10 +19,6 @@
     padding: .25em;
     transition: none;
 
-    @media (min-width: $breakpoint-medium) {
-      padding: .25em .5em;
-    }
-
     &:first-child {
       padding-left: 0;
     }
@@ -36,12 +32,21 @@
         position: absolute;
         bottom: .125em;
         left: .25em;
-        right: .25em;
+        right: 0;
         border-bottom: 2px solid;
       }
 
       &:first-child:before {
         left: 0;
+      }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+      padding: .25em .5em;
+
+      &:hover:before, &.active:before {
+        left: .5em;
+        right: .5em;
       }
     }
   }
@@ -50,7 +55,9 @@
     a {
       opacity: .5;
 
-      &:hover { opacity: 1; }
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
