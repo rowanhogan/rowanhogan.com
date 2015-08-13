@@ -8,19 +8,50 @@
   &:after {
     content: '';
     display: block;
-    border-top: medium solid;
-    width: 1em;
+    border-top: 3px dotted #ccc;
+    width: 15px;
     margin: 2em 0;
   }
 
+  &:last-child:after {
+    display: none;
+  }
 
   h3 {
     margin-bottom: 0.5em;
+
+    a {
+      margin-right: .333em;
+    }
+  }
+
+  .post-meta {
+    font-size: 60%;
+    font-weight: normal;
+    color: #666;
   }
 
   p {
     font-size: 1em;
     margin: .5em 0;
+  }
+}
+
+.article-body {
+  p {
+    font-size: 1.125em;
+    line-height: 1.45em;
+  }
+
+  img {
+    display: block;
+    margin: 2em 0;
+    max-width: 100%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+
+    @media (min-width: $max-width) {
+      max-width: 500px;
+    }
   }
 }
 
@@ -64,7 +95,5 @@
     .next {
       right: 0;
     }
-
   }
-
 }

@@ -2,7 +2,6 @@
 title: Deploying your static site with Travis CI
 date: 2015-05-14
 tags: travis, bash, static sites, middleman, github pages
-published: true
 ---
 
 So I know I just wrote [a post](/blog/simple-static-sites) about deploying your sites with [Netlify](https://www.netlify.com/), but this very website uses [Travis CI](https://travis-ci.org/) for continuous deployment. There was just one minor issue that was preventing the CI/CD process running smoothly... Any Pull Requests submitted to `master` were deployed just the same as a commit directly to master.
@@ -51,7 +50,7 @@ We've moved the deploy script code into a separate bash file to get around synta
 ![Travis build...](http://netengine-blog-media.s3.amazonaws.com/simple_static_sites/travis.png)
 
 
-<p style="text-align: center; font-size: 1.25em;"><strong>Huzzah!</strong> <img src="http://netengine-blog-media.s3.amazonaws.com/simple_static_sites/fireworks-animated.gif" style="display: inline-block; margin: 1em .5em; height: 3em; vertical-align: middle;"></p>
+<p style="text-align: center; font-size: 1.25em;"><strong>Huzzah!</strong> <img src="http://netengine-blog-media.s3.amazonaws.com/simple_static_sites/fireworks-animated.gif" style="display: inline-block; margin: 1em .5em; height: 3em; vertical-align: middle; box-shadow: none;"></p>
 
 
 The end process is as follows:

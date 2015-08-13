@@ -2,7 +2,6 @@
 title: Simple static sites
 date: 2015-05-13
 tags: static sites, middleman, github, contentful, netlify
-published: true
 ---
 
 It seems not too long ago I wrote [this post](http://netengine.com.au/blog/blogging-straight-from-prose-io/) about blogging and static site generation, but since then I have come across different types of projects which require a slightly different setup.

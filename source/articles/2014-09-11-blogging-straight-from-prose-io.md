@@ -1,7 +1,7 @@
 ---
 title: Blogging straight from Prose.io
+date: 2014-09-11
 tags: "prose.io, travis, github, middleman. ruby, bash"
-published: true
 ---
 
 ...with some help from Travis + Middleman & Github

@@ -16,7 +16,7 @@ The intitial work for the project came from a number of different projects withi
 
 <div class="tablet"><iframe src="//www.terrain.io/#interactive" frameborder="0"></iframe></div>
 
-See more about the project at [terrain.io](http://terrain.io)
+See more about the project at [terrain.io](http://terrain.io).
 
 <style>
   html:after {
