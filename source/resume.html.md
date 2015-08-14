@@ -8,11 +8,19 @@ title: Rèsumè
 
 ##### Lead Designer
 
-- UI & Interface Design
-- Project & client management
-- Project planning & estimation
-- Front-end web development
-- Ruby on Rails development
+- Key Responsibilities
+  - User Experience &amp; User Interface Design<br>
+  - Front-end web development<br>
+  - Project &amp; client management<br>
+  - Project planning &amp; estimation<br>
+  - Ruby on Rails development<br>
+
+- Technologies:
+  - Scalable and organised CSS with Sass / Stylus<br>
+  - AngularJS, Gulp / Grunt, Node, Meteor<br>
+  - Ruby on Rails, Middleman<br>
+  - HAML, Handlebars / Mustache, Coffeescript<br>
+  - Git, Bash, Adobe Creative Suite</span>
 
 #### Biscuit magazine _2010--2012_
 
