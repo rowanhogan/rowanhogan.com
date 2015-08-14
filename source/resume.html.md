@@ -2,6 +2,25 @@
 title: Rèsumè
 ---
 
+<div class="contact-info-block print-only">
+
+  <h1>Rowan Hogan</h1>
+
+  <h3>Web Designer / Developer</h3>
+
+  <label class="contact-info"></label>
+
+  <dl>
+    <dt>LinkedIn:</dt>
+    <dd><a class="linkedin" href="http://www.linkedin.com/in/rowanhogan">linkedin.com/in/rowanhogan</a></dd>
+    <dt>GitHub:</dt>
+    <dd><a class="github" href="https://github.com/rowanhogan">github.com/rowanhogan</a></dd>
+    <dt>Dribbble:</dt>
+    <dd><a class="dribbble" href="http://dribbble.com/rowanhogan">dribbble.com/rowanhogan</a></dd>
+  </dl>
+</div>
+
+
 ## Work
 
 #### [NetEngine](http://netengine.com.au/) _2011--2015_
@@ -38,6 +57,42 @@ title: Rèsumè
 - Identity design, graphic design and web development for a variety of small business clients.
 
 
+## References
+
+
+
+#### Bruce Stronge
+
+_Founder and CEO - NetEngine_
+
+Rowan leaving to Canada is the worst loss we've had in 8 years of building software. A solid design talent, frontend dev (all the js frameworks), and now backend too - he's quite simply the greatest asset we've ever had .
+
+It is a shame he's such a natural designer and developer because he's as valuable as a client and project manager. Rowan ended up running all of our largest and most valuable client projects, and leading and gaining the respect of the rest of team for his consistent and professional approach to just getting it done, and getting it done really well.
+
+If I were Mapbox or Mozilla (or anyone else who cares about design, quality code and great people) ... i'd try to hire Rowan today.
+
+#### Andrea Tjoeng
+
+_General Manager - SCOUT Recruitment Software_
+
+I can't recommend Rowan highly enough. He is one of the most talented designers/front-end developers I've worked with. He's also a customer-focused individual who can talk to a non-technical (and not particularly creative) person like me to bring the ideas in my head to life! I have always found him to be professional, diligent (great follow-through) and friendly.
+
+
+#### Olivier Pichon
+
+_Software Engineer at NetEngine_
+
+I had the pleasure to work with Rowan at NetEngine for more than two years. When I first met him, he introduced himself as a Designer and UI Developer.
+
+It turns out Rowan is far more than that: he is an authentic full stack developer, he can write great Ruby Code, he's using on day to day basis the latest JavaScript frameworks and his design skills are amazing.
+
+At NetEngine, Rowan was also an excellent Project Manager, handling really demanding clients as well as tight deadlines.
+
+Rowan's ability to stay focus for hours in a row, delivering at high pace, is outstanding.
+
+Finally, he definitely is a great asset to have in a team where he gets along with everyone, sharing his communicative love for good code and also great cuisine.less
+
+
 ## Volunteering
 
 
@@ -64,7 +119,7 @@ title: Rèsumè
 - Completed minor in Animation.
 
 
-### Skills
+## Skills
 
 <figure class="skills">
   <figcaption>According to endorsements from others on <a href="http://au.linkedin.com/in/rowanhogan#background-skills" target="_blank">LinkedIn</a></figcaption>
@@ -88,3 +143,5 @@ title: Rèsumè
     <label style="width: 4em;">CSS3</label>
   </div>
 </figure>
+
+<a href="#" class="web-only" onclick="event.preventDefault(); window.print();">Print / PDF</a>

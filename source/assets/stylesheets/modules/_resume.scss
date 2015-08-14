@@ -1,8 +1,31 @@
 .resume .site-main {
   text-align: left;
 
+  h1 {
+    display: none;
+  }
+
+  h1, h2 {
+    position: relative;
+    padding-bottom: .5em;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-bottom: 3px solid;
+      width: 1em;
+    }
+  }
+
   h2 {
     margin-bottom: 2em;
+    page-break-before: always;
+
+    &:first-child {
+      page-break-before: avoid;
+    }
   }
 
   h4 {
@@ -26,6 +49,11 @@
       font-weight: normal;
       margin: 0 0 .5em;
     }
+
+    + p > em {
+      display: block;
+      margin-bottom: 0.75em;
+    }
   }
 
   ul {
@@ -33,8 +61,55 @@
   }
 
   p {
-    font-size: 100%;
+    font-size: 90%;
     margin: .25em 0;
+    line-height: 1.4em;
+  }
+}
+
+.resume .contact-info-block {
+  padding-top: 6em;
+
+  h1:before {
+    border-bottom-width: 5px;
+  }
+
+  h3 {
+    margin: -1em 0 2em;
+    font-weight: 300;
+  }
+
+  .contact-info {
+    font-size: 1.5em;
+    line-height: 1.45em;
+    margin-bottom: 1.5em;
+
+    a {
+      display: inline-block;
+      margin: 0 .25em .25em 0;
+    }
+  }
+
+  dl {
+    font-size: 1.125em;
+    line-height: 1.75em;
+    margin-top: 2em;
+
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    dt, dd {
+      float: left;
+    }
+
+    dt {
+      clear: both;
+      width: 7em;
+      font-weight: 600;
+    }
   }
 }
 
