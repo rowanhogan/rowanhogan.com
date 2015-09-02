@@ -1,9 +1,4 @@
-.resume .site-main {
-  text-align: left;
-
-  h1 {
-    display: none;
-  }
+.resume {
 
   h1, h2 {
     position: relative;
@@ -118,18 +113,48 @@ figcaption {
   margin: 0 0 1.5em;
 }
 
-figure.skills label {
-  padding: .25em .75em;
-  font-size: 75%;
-  white-space: nowrap;
-  background: lightgrey;
-  text-align: left;
-  max-width: 100%;
-  box-sizing: border-box;
+blockquote {
+  border: 0;
+  padding: 0;
+
+  &:before, &:after {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  &:before {
+    content: '\201C';
+    position: absolute;
+    margin-left: -.75em;
+  }
+
+  &:after {
+    content: '\201D';
+    position: relative;
+    right: -.125em;
+  }
 }
 
-@media screen and (min-width: $max-width * 1.667) {
-  figure.skills {
+figure.skills {
+  label {
+    padding: .25em .75em;
+    font-size: 75%;
+    white-space: nowrap;
+    background: lightgrey;
+    text-align: left;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  &.inline label {
+    display: inline-block;
+    border-radius: 3px;
+    margin-right: .15em;
+    padding: .25em 1em;
+  }
+
+  @media screen and (min-width: $max-width * 1.667) {
     .labels {
       width: 0;
       height: 38.5em;

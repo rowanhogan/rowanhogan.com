@@ -1,4 +1,6 @@
-Time.zone = 'Australia/Brisbane'
+require "linkedin_scraper"
+
+Time.zone = "America/New_York"
 
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
@@ -30,6 +32,8 @@ page '/404.html',     layout: false
 page '/404',          layout: false
 page '/rss.xml',      layout: false
 page '/sitemap.xml',  layout: false
+
+@resume = ::Linkedin::Profile.get_profile("http://www.linkedin.com/in/rowanhogan")
 
 helpers do
   def menu_link(name, link)
