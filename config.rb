@@ -1,6 +1,6 @@
-require "linkedin_scraper"
-
 Time.zone = "America/New_York"
+
+require "linkedin_scraper"
 
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
@@ -12,11 +12,6 @@ set :js_dir,     'assets/javascripts'
 sprockets.append_path File.join "#{root}", "source/assets/bower_components"
 ignore 'assets/bower_components/*'
 
-activate :autoprefixer
-activate :directory_indexes
-activate :livereload
-activate :syntax
-
 activate :blog do |blog|
   blog.layout = "layouts/blog"
   blog.page_link = "p:num"
@@ -27,6 +22,11 @@ activate :blog do |blog|
   blog.summary_length    = 200
   blog.summary_separator = /(READMORE)/
 end
+
+activate :autoprefixer
+activate :livereload
+activate :syntax
+activate :directory_indexes
 
 page '/404.html',     layout: false
 page '/404',          layout: false
