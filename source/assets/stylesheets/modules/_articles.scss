@@ -47,11 +47,7 @@
     display: block;
     margin: 2em 0;
     max-width: 100%;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
-
-    @media (min-width: $max-width) {
-      max-width: 500px;
-    }
+    box-shadow: 0 0 0 1px rgba(black, 0.1);
   }
 }
 
@@ -85,7 +81,7 @@
     }
 
     .disabled {
-      opacity: .25;
+      opacity: .1;
     }
 
     .prev {
