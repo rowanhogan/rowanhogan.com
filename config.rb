@@ -33,6 +33,8 @@ page '/404',          layout: false
 page '/rss.xml',      layout: false
 page '/sitemap.xml',  layout: false
 
+redirect 'contact/index.html',  to: '/'
+
 @resume = ::Linkedin::Profile.get_profile("http://www.linkedin.com/in/rowanhogan")
 
 helpers do
