@@ -35,7 +35,7 @@ page '/sitemap.xml',  layout: false
 
 redirect 'contact/index.html',  to: '/'
 
-@resume = ::Linkedin::Profile.get_profile("http://www.linkedin.com/in/rowanhogan")
+@resume = data.resume
 
 helpers do
   def menu_link(name, link)

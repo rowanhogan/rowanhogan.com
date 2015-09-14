@@ -2,21 +2,15 @@
 title: Rèsumè
 ---
 
-.contact-info-block.print-only
+.contact-info-block
   %h1= @resume.name
   %h3= @resume.title
 
   %label.contact-info
   %dl
-    %dt LinkedIn:
-    %dd
-      %a.linkedin{:href => "http://www.linkedin.com/in/rowanhogan"} linkedin.com/in/rowanhogan
-    %dt GitHub:
-    %dd
-      %a.github{:href => "https://github.com/rowanhogan"} github.com/rowanhogan
-    %dt Dribbble:
-    %dd
-      %a.dribbble{:href => "http://dribbble.com/rowanhogan"} dribbble.com/rowanhogan
+    - @resume.social.each do |social|
+      %dt= social.name
+      %dd= link_to social.url, social.url, class: social.name
 
 %h2 Work
 
@@ -81,8 +75,8 @@ title: Rèsumè
 
 %h2 References
 
-.references
-  .reference
+%ul.references
+  %li.reference
     %h4 Bruce Stronge
     %p
       %em Founder and CEO - NetEngine
@@ -93,14 +87,14 @@ title: Rèsumè
     %p
       If I were Mapbox or Mozilla (or anyone else who cares about design, quality code and great people) ... i'd try to hire Rowan today.
 
-  .reference
+  %li.reference
     %h4 Andrea Tjoeng
     %p
       %em General Manager - SCOUT Recruitment Software
     %p
       I can't recommend Rowan highly enough. He is one of the most talented designers/front-end developers I've worked with. He's also a customer-focused individual who can talk to a non-technical (and not particularly creative) person like me to bring the ideas in my head to life! I have always found him to be professional, diligent (great follow-through) and friendly.
 
-  .reference
+  %li.reference
     %h4 Olivier Pichon
     %p
       %em Software Engineer at NetEngine
@@ -171,5 +165,7 @@ title: Rèsumè
     %label{:style => "width: 4em;"} User Experience Design
     %label{:style => "width: 4em;"} Ruby
     %label{:style => "width: 4em;"} CSS3
+
+%br
 
 %a.web-only{:href => "#", :onclick => "event.preventDefault(); window.print();"} Print / PDF

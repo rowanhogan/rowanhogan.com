@@ -1,16 +1,9 @@
 .blog-list li {
   padding: 0;
+  margin-bottom: 3em;
 
   &:before {
     display: none;
-  }
-
-  &:after {
-    content: '';
-    display: block;
-    border-top: 3px dotted #ccc;
-    width: 15px;
-    margin: 2em 0;
   }
 
   &:last-child:after {
