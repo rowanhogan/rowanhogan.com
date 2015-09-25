@@ -143,6 +143,10 @@ ul, ol {
       opacity: 1;
     }
   }
+
+  .site-nav a:first-child {
+    padding-left: 0;
+  }
 }
 
 @each $site, $color in $colours {
