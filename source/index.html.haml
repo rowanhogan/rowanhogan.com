@@ -4,9 +4,17 @@ show_title: false
 ---
 
 .blurb
-
-  %h3 Hi, I'm Rowan.
-
-  %p I'm a web designer &amp; developer from Brisbane, Australia, currently living in Canada.
+  %p
+    %strong Hi, I'm Rowan.
+    I'm a front-end developer and designer from Brisbane, Australia, currently living in Toronto.
 
   %p= "Read more about some of the #{link_to 'projects', '/projects'} I've been involved with, or check out my #{link_to 'rèsumè', '/resume'}."
+
+%h5 Recent
+
+#timeline-list-labels.timeline-list-labels<
+  %label.show-all-link.active{ data: { type: 'all' } } All
+
+%ul#timeline.timeline
+
+%input#instagram{type: "hidden", data: { token: "682546.467ede5.77d245b9512844d28ec5253fb8a16fc4" } }

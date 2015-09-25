@@ -14,133 +14,51 @@ title: Rèsumè
 
 %h2 Work
 
-%h4
-  %a{:href => "http://netengine.com.au/"} NetEngine
-  %em 2011--2015
-%h5 Lead Designer
-%ul
-  %li
-    %p
-      Key Responsibilities
-    %ul
-      %li
-        User Experience &amp; User Interface Design
-        %br
-      %li
-        Front-end web development
-        %br
-      %li
-        Project &amp; client management
-        %br
-      %li
-        Project planning &amp; estimation
-        %br
-      %li
-        Ruby on Rails development
-        %br
-  %li
-    %p
-      Technologies:
-    %ul
-      %li
-        Scalable and organised CSS with Sass / Stylus
-        %br
-      %li
-        AngularJS, Gulp / Grunt, Node, Meteor
-        %br
-      %li
-        Ruby on Rails, Middleman
-        %br
-      %li
-        HAML, Handlebars / Mustache, Coffeescript
-        %br
-      %li
-        Git, Bash, Adobe Creative Suite
-%h4
-  Biscuit magazine
-  %em 2010--2012
-%h5 Designer/Developer
-
-%ul
-  %li Web &amp; magazine layout design
-  %li Identity design
-  %li Web development and system administration
-%h4
-  Tetrametric Creative
-  %em 2009--2011
-%h5 Designer/Developer
-%ul
-  %li Freelance work
-  %li Identity design, graphic design and web development for a variety of small business clients.
+- @resume.jobs.each do |job|
+  %h4
+    - if job.link
+      = link_to job.company, job.link
+    - else
+      = job.company
+    %em= job.period
+  %h5= job.title
+  .job-description
+    = job.description.html_safe
 
 %h2 References
 
 %ul.references
-  %li.reference
-    %h4 Bruce Stronge
-    %p
-      %em Founder and CEO - NetEngine
-    %p
-      Rowan leaving to Canada is the worst loss we've had in 8 years of building software. A solid design talent, frontend dev (all the js frameworks), and now backend too - he's quite simply the greatest asset we've ever had .
-    %p
-      It is a shame he's such a natural designer and developer because he's as valuable as a client and project manager. Rowan ended up running all of our largest and most valuable client projects, and leading and gaining the respect of the rest of team for his consistent and professional approach to just getting it done, and getting it done really well.
-    %p
-      If I were Mapbox or Mozilla (or anyone else who cares about design, quality code and great people) ... i'd try to hire Rowan today.
-
-  %li.reference
-    %h4 Andrea Tjoeng
-    %p
-      %em General Manager - SCOUT Recruitment Software
-    %p
-      I can't recommend Rowan highly enough. He is one of the most talented designers/front-end developers I've worked with. He's also a customer-focused individual who can talk to a non-technical (and not particularly creative) person like me to bring the ideas in my head to life! I have always found him to be professional, diligent (great follow-through) and friendly.
-
-  %li.reference
-    %h4 Olivier Pichon
-    %p
-      %em Software Engineer at NetEngine
-    %p
-      I had the pleasure to work with Rowan at NetEngine for more than two years. When I first met him, he introduced himself as a Designer and UI Developer.
-    %p
-      It turns out Rowan is far more than that: he is an authentic full stack developer, he can write great Ruby Code, he's using on day to day basis the latest JavaScript frameworks and his design skills are amazing.
-    %p
-      At NetEngine, Rowan was also an excellent Project Manager, handling really demanding clients as well as tight deadlines.
-    %p
-      Rowan's ability to stay focus for hours in a row, delivering at high pace, is outstanding.
-    %p
-      Finally, he definitely is a great asset to have in a team where he gets along with everyone, sharing his communicative love for good code and also great cuisine.less
+  - @resume.references.each do |reference|
+    %li.reference
+      %h4= reference.name
+      %p
+        %em= reference.position
+      = reference.content.html_safe
 
 
 %h2 Volunteering
 
-%h4
-  %a{:href => "http://rhokbrisbane.org/"} RHoK Brisbane
-  %em 2013--
-%ul
-  %li
-    As a part of
-    %a{:href => "http://rhokbrisbane.org/"} RHoK Brisbane
-    (part of
-    = succeed ")" do
-      %a{:href => "http://rhok.org/"} Random Hacks of Kindess
-    since it's first hack in 2013, I have attended and help coordinate all of the (3 as of writing) events.
-  %li I have worked directly with QLD Kids, Karuna &amp; Resonate amongst others on humanitarian projects.
-%h4
-  %a{:href => "http://www.variety.org.au/qld/"} Variety QLD
-  %em 2011
-%ul
-  %li Print &amp; email design for ‘Heart Art Show’ Flyer.
+- @resume.volunteering.each do |item|
+  %h4
+    - if item.link
+      = link_to item.name, item.link
+    - else
+      = item.name
+    %em= item.period
+  = item.description.html_safe
+
 
 %h2 Education
 
-%h4
-  %a{:href => "http://www.qut.edu.au/"} QUT
-  %em 2008--2010
-%h5 Bachelor of Creative Industries (Communication Design)
-%ul
-  %li Completed two years of study
-  %li Design theory, interaction &amp; interface design, information architecture
-  %li Also Included graphic design, web development, video editing, sound recording and animation techniques.
-  %li Completed minor in Animation.
+- @resume.education.each do |item|
+  %h4
+    - if item.link
+      = link_to item.name, item.link
+    - else
+      = item.name
+    %em= item.period
+  %h5= item.degree
+  = item.description.html_safe
 
 %h2 Skills
 
@@ -149,22 +67,8 @@ title: Rèsumè
     According to endorsements from others on
     %a{:href => "http://au.linkedin.com/in/rowanhogan#background-skills", :target => "_blank"} LinkedIn
   .labels
-    %label{:style => "width: 19em;"} Front-end
-    %label{:style => "width: 18em;"} User Interface Design
-    %label{:style => "width: 14em;"} SASS
-    %label{:style => "width: 11em;"} JavaScript
-    %label{:style => "width: 10em;"} Web Development
-    %label{:style => "width: 9em;"} Ruby on Rails
-    %label{:style => "width: 9em;"} HTML 5
-    %label{:style => "width: 9em;"} HAML
-    %label{:style => "width: 8em;"} CoffeeScript
-    %label{:style => "width: 7em;"} jQuery
-    %label{:style => "width: 6em;"} Web Applications
-    %label{:style => "width: 5em;"} Web Design
-    %label{:style => "width: 5em;"} Git
-    %label{:style => "width: 4em;"} User Experience Design
-    %label{:style => "width: 4em;"} Ruby
-    %label{:style => "width: 4em;"} CSS3
+    - @resume.skills.each do |skill|
+      %label{:style => "width: #{skill.endorsements}em;"}= skill.name
 
 %br
 

@@ -2,7 +2,6 @@
   margin: 0 0 3em;
   padding: .5em 0;
   z-index: 100;
-  text-align: center;
 
   label {
     position: relative;
@@ -197,7 +196,7 @@
   }
 }
 
-@media screen and (min-width: $breakpoint-medium) {
+@media screen and (min-width: $breakpoint-small) {
   .timeline:before {
     content: '';
     position: absolute;

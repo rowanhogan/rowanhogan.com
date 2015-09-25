@@ -1,15 +1,10 @@
-@media screen and (max-width: $breakpoint-medium) {
-  @each $project, $color in $projects {
-    body.projects_#{$project} {
 
-      .tablet {
-        background-image: url("/assets/images/projects/#{$project}-tablet.jpg");
-      }
+.projects iframe {
+  border: thin solid #ccc;
+  margin: 1.5em 0;
 
-      .mobile {
-        background-image: url("/assets/images/projects/#{$project}-mobile.jpg");
-      }
-    }
+  @media screen and (min-width: $breakpoint-medium) {
+    height: 75vh;
   }
 }
 
@@ -23,28 +18,41 @@ body.projects_terrain:before {
   border-left-color: hsl(225, 100%, 90%);
 }
 
-a.featured {
+.projects li {
+  padding: 0;
+  margin: 1em 0 2em;
   position: relative;
-  font-weight: bold;
-  border-bottom-style: dotted;
 
-  &:after {
-    content: 'More...';
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    color: black;
-    font-size: 2em;
-    opacity: 0;
-    visibility: hidden;
-    transform: translate(-50%, -50%);
-    transition: opacity 1.5s ease;
+  &:before {
+    display: none;
   }
 
-  &:hover:after {
-    top: 50%;
-    left: 50%;
-    visibility: visible;
-    opacity: .75;
+  a {
+    display: inline-block;
+    font-weight: lighter;
+    font-size: 2em;
+    border: 0;
+
+    span {
+      display: inline-block;
+      padding-bottom: .25em;
+      border-bottom: thin solid;
+    }
+
+    small {
+      display: block;
+      margin: .75em 0 0;
+      font-size: 50%;
+    }
+  }
+
+  .collaborator {
+    position: relative;
+    top: .25em;
+    margin-left: -.25em;
+    vertical-align: middle;
+    font-size: 40%;
+    font-style: italic;
+    font-weight: normal;
   }
 }

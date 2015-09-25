@@ -34,6 +34,7 @@ page '/rss.xml',      layout: false
 page '/sitemap.xml',  layout: false
 
 redirect 'contact/index.html',  to: '/'
+redirect 'feed/index.html',  to: '/'
 
 @resume = data.resume
 

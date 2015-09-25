@@ -1,14 +1,13 @@
 $ ->
   classes = [
     'bigsky'
-    'terrain'
-    'rhokbrisbane'
-    'trigger'
-    'scout'
-    'ausbuild'
+    'concierge'
     'cricket-scores'
-    'nature-qld'
     'karuna'
+    'nature-qld'
+    'resume-builder'
+    'terrain'
+    'wikipadia'
     'dribbble'
     'linkedin'
     'twitter'
@@ -28,3 +27,10 @@ $ ->
   $(window).on 'scroll', ->
     document.styleSheets[0].addRule('body:before',"position: absolute");
     document.styleSheets[0].insertRule("body::before { position: absolute; }", 0);
+
+  iOS = /iPad|iPhone|iPod/.test(navigator.platform)
+  if iOS
+    $('iframe').each ->
+      $(this).wrap('<div style="display: none; height: 480px; overflow: auto"></div>')
+
+    $('iframe').eq(0).parent().show()

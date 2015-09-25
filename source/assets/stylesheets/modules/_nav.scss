@@ -19,10 +19,6 @@
     padding: .25em;
     transition: none;
 
-    &:first-child {
-      padding-left: 0;
-    }
-
     &:hover, &.active {
       color: black;
       position: relative;
@@ -32,12 +28,8 @@
         position: absolute;
         bottom: .125em;
         left: .25em;
-        right: 0;
+        right: .25em;
         border-bottom: 2px solid;
-      }
-
-      &:first-child:before {
-        left: 0;
       }
     }
 
@@ -79,6 +71,15 @@
 
     .site-nav {
       float: right;
+
+      a {
+        padding: .25em .75em;
+
+        &:before {
+          left: .75em;
+          right: .75em;
+        }
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
 name: "Rowan Hogan"
-title: "Web Designer & Developer"
+title: "Front-end Developer & Designer"
+summary: "Hi, I'm Rowan. I'm a web designer & developer from Brisbane, Australia, currently living in Toronto. I have over five years experience in design, front end and full stack development, and project and client management."
 social:
   - name: "LinkedIn"
     url: "http://www.linkedin.com/in/rowanhogan"
@@ -7,3 +8,130 @@ social:
     url: "https://github.com/rowanhogan"
   - name: "Dribbble"
     url: "http://dribbble.com/rowanhogan"
+jobs:
+  - company: NetEngine
+    link: "http://netengine.com.au"
+    title: Lead Designer
+    period: "2011 - 2015"
+    description: |
+      <ul>
+        <li>
+          <p>Key Responsibilities</p>
+          <ul>
+            <li>User Experience &amp; User Interface Design</li>
+            <li>Front-end web development</li>
+            <li>Project &amp; client management</li>
+            <li>Project planning &amp; estimation</li>
+            <li>Ruby on Rails development</li>
+          </ul>
+        </li>
+        <li>
+          <p>Technologies:</p>
+          <ul>
+            <li>Scalable and organised CSS with Sass / Stylus</li>
+            <li>AngularJS, Gulp / Grunt, Node, Meteor</li>
+            <li>Ruby on Rails, Middleman</li>
+            <li>HAML, Handlebars / Mustache, Coffeescript</li>
+            <li>Git, Bash, Adobe Creative Suite</li>
+          </ul>
+        </li>
+      </ul>
+  - company: Biscuit magazine
+    title: Designer/Developer
+    period: "2010 - 2012"
+    description: |
+      <ul>
+        <li>Web &amp; magazine layout design</li>
+        <li>Identity design</li>
+        <li>Web development and system administration</li>
+      </ul>
+  - company: Tetrametric Creative
+    title: Designer/Developer
+    period: "2009 - 2011"
+    description: |
+      <ul>
+        <li>Freelance work</li>
+        <li>Identity design, graphic design and web development for a variety of small business clients.</li>
+      </ul>
+references:
+  - name: Bruce Stronge
+    position: Founder and CEO - NetEngine
+    content: |
+      <p>Rowan leaving to Canada is the worst loss we've had in 8 years of building software. A solid design talent, frontend dev (all the js frameworks), and now backend too - he's quite simply the greatest asset we've ever had .</p>
+      <p>It is a shame he's such a natural designer and developer because he's as valuable as a client and project manager. Rowan ended up running all of our largest and most valuable client projects, and leading and gaining the respect of the rest of team for his consistent and professional approach to just getting it done, and getting it done really well.</p>
+      <p>If I were anyone else who cares about design, quality code and great people... I'd try to hire Rowan today.</p>
+  - name: Andrea Tjoeng
+    position: General Manager - SCOUT Recruitment Software
+    content: |
+      <p>I can't recommend Rowan highly enough. He is one of the most talented designers/front-end developers I've worked with. He's also a customer-focused individual who can talk to a non-technical (and not particularly creative) person like me to bring the ideas in my head to life! I have always found him to be professional, diligent (great follow-through) and friendly.</p>
+  - name: Olivier Pichon
+    position: Software Engineer at NetEngine
+    content: |
+      <p>I had the pleasure to work with Rowan at NetEngine for more than two years. When I first met him, he introduced himself as a Designer and UI Developer.</p>
+      <p>It turns out Rowan is far more than that: he is an authentic full stack developer, he can write great Ruby Code, he's using on day to day basis the latest JavaScript frameworks and his design skills are amazing.</p>
+      <p>At NetEngine, Rowan was also an excellent Project Manager, handling really demanding clients as well as tight deadlines.</p>
+      <p>Rowan's ability to stay focus for hours in a row, delivering at high pace, is outstanding.</p>
+      <p>Finally, he definitely is a great asset to have in a team where he gets along with everyone, sharing his communicative love for good code and also great cuisine.</p>
+volunteering:
+  - name: RHoK Brisbane
+    link: "http://rhokbrisbane.org/"
+    period: "2013 -"
+    description: |
+      <ul>
+        <li>
+          As a part of <a href="http://rhokbrisbane.org/">RHoK Brisbane</a> (part of <a href="http://rhok.org/">Random Hacks of Kindess</a>) since it's first hack in 2013, I have attended and help coordinate all of the (3 as of writing) events.
+        </li>
+        <li>I have worked directly with QLD Kids, Karuna &amp; Resonate amongst others on humanitarian projects.</li>
+      </ul>
+  - name: Variety QLD
+    link: "http://www.variety.org.au/qld/"
+    period: "2011"
+    description: |
+      <ul>
+        <li>Print &amp; email design for ‘Heart Art Show’ Flyer.</li>
+      </ul>
+education:
+  - name: QUT
+    link: "http://www.qut.edu.au/"
+    period: "2008 - 2010"
+    degree: Bachelor of Creative Industries (Communication Design)
+    description: |
+      <ul>
+        <li>Completed two years of study</li>
+        <li>Design theory, interaction &amp; interface design, information architecture</li>
+        <li>Also Included graphic design, web development, video editing, sound recording and animation techniques.</li>
+        <li>Completed minor in Animation.</li>
+      </ul>
+skills:
+  - name: Front-end
+    endorsements: 21
+  - name: User Interface Design
+    endorsements: 21
+  - name: SASS
+    endorsements: 15
+  - name: JavaScript
+    endorsements: 13
+  - name: Web Development
+    endorsements: 13
+  - name: Ruby on Rails
+    endorsements: 10
+  - name: HTML 5
+    endorsements: 10
+  - name: HAML
+    endorsements: 10
+  - name: CoffeeScript
+    endorsements: 9
+  - name: jQuery
+    endorsements: 8
+  - name: Web Applications
+    endorsements: 8
+  - name: Web Design
+    endorsements: 8
+  - name: Git
+    endorsements: 7
+  - name: Ruby
+    endorsements: 7
+  - name: User Experience Design
+    endorsements: 5
+  - name: CSS3
+    endorsements: 5

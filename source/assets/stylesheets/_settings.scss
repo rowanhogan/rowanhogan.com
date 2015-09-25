@@ -1,6 +1,6 @@
 $font-size: 100% !default;
 
-$font-family: "franklin-gothic-urw", "Source Sans Pro", "Helvetica Neue", sans-serif;
+$font-family: "Roboto", "Source Sans Pro", "Helvetica Neue", sans-serif;
 $font-family-headings: $font-family;
 
 $line-height: 1.5em;
@@ -30,19 +30,22 @@ $colours: ("dribbble", $dribbble),
           ("github", $github),
           ("lastfm", $lastfm),
           ("linkedin", $linkedin),
-          ("twitter", $twitter);
-
-$projects: ("ausbuild", hsl(31, 90%, 85%)),
-           ("bigsky", hsl(150, 75%, 90%)),
-           ("concierge", hsl(200, 75%, 90%)),
-           ("cricket-scores", hsl(0, 85%, 90%)),
-           ("karuna", hsl(335, 95%, 90%)),
-           ("nature-qld", hsl(110, 100%, 90%)),
-           ("rhokbrisbane", hsl(205, 70%, 90%)),
-           ("scout", hsl(200, 75%, 90%)),
-           ("terrain", hsl(240, 100%, 90%)),
-           ("trigger", hsl(200, 75%, 90%));
+          ("twitter", $twitter),
+          ("bigsky", hsl(150, 50%, 50%)),
+          ("concierge", hsl(200, 75%, 50%)),
+          ("cricket-scores", hsl(0, 75%, 40%)),
+          ("karuna", hsl(335, 95%, 50%)),
+          ("nature-qld", hsl(150, 75%, 25%)),
+          ("resume-builder", hsl(200, 100%, 50%)),
+          ("terrain", hsl(228, 100%, 16%)),
+          ("wikipadia", hsl(0, 0%, 30%));
 
 $input-hover-foreground-color:  black;
 $input-hover-background-color:  white;
 $input-hover-border-color:      #aaa;
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
