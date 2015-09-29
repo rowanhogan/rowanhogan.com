@@ -9,6 +9,14 @@ social:
   - name: "Dribbble"
     url: "http://dribbble.com/rowanhogan"
 jobs:
+  - company: Pressly
+    title: Designer/Developer
+    period: "2015 -"
+    description: |
+      <ul>
+        <li>User Experience &amp; User Interface Design</li>
+        <li>Front-end web development</li>
+      </ul>
   - company: NetEngine
     link: "http://netengine.com.au"
     title: Lead Designer
