@@ -50,7 +50,7 @@ helpers do
 end
 
 configure :build do
-  activate :asset_hash
+  activate :asset_hash, :ignore => "assets/shantanu/*"
   activate :minify_css
   activate :minify_javascript
   activate :relative_assets
