@@ -1,6 +1,18 @@
 html {
   color: #444;
   transition: all 200ms ease;
+
+  @media (min-width: 1200px) {
+    font-size: 120%;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 140%;
+  }
+
+  @media (min-width: 1600px) {
+    font-size: 150%;
+  }
 }
 
 body {
