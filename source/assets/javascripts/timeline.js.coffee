@@ -7,7 +7,6 @@ sortTimeline = ->
 retrieveItems = (type, url) ->
   $.getJSON url, (data) ->
     data = switch
-      when type is "dribbble" then data.shots
       when type is "lastfm" then data.recenttracks.track
       else data.data
 
@@ -26,7 +25,7 @@ retrieveItems = (type, url) ->
 initTimeline = ->
   types = [
     name: "dribbble"
-    url: "http://api.dribbble.com/players/rowanhogan/shots?callback=?"
+    url: "https://api.dribbble.com/v1/users/rowanhogan/shots?access_token=5f5428831a9e29a663d347e98208de6c1793403210155760730de27280e48a0b&callback=?"
   ,
     name: "github"
     url: "https://api.github.com/users/rowanhogan/events/public?callback=?"
