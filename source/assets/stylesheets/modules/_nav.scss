@@ -1,6 +1,6 @@
 .logo {
   display: block;
-  margin: 0 auto 1.5em;
+  margin: 0 auto 2.5em;
   transition: all .25s ease;
 
   img, svg {
@@ -80,6 +80,26 @@
           right: .75em;
         }
       }
+    }
+  }
+}
+
+.site-footer {
+  font-size: 80%;
+
+  a {
+    opacity: .75;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .site-nav a:first-child {
+    padding-left: 0;
+
+    &:before {
+      left: 0;
     }
   }
 }

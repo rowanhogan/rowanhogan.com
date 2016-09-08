@@ -21,4 +21,3 @@
     <a href="http://www.last.fm/user/rehogan" class="now-playing">Now playing</a>
   <%= end %>
 </li>
-

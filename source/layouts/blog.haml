@@ -12,10 +12,6 @@
     = stylesheet_link_tag "application"
     = stylesheet_link_tag "print", media: 'print'
 
-    = javascript_include_tag "//use.typekit.net/arj3ujg.js"
-    :javascript
-      try{Typekit.load();}catch(e){}
-
     /[if lt IE 9]
       = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"
 
@@ -59,3 +55,5 @@
 
     - if build?
       = partial "layouts/analytics"
+
+    %link{ href: 'https://fonts.googleapis.com/css?family=Roboto:400,300,400italic,700', rel: 'stylesheet', type: 'text/css' }

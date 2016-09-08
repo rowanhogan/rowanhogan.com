@@ -10,11 +10,12 @@ show_title: false
 
   %p= "Read more about some of the #{link_to 'projects', '/projects'} I've been involved with, or check out my #{link_to 'rèsumè', '/resume'}."
 
-%h5 Recent
+.timeline-container
+  %h5 Recent
 
-#timeline-list-labels.timeline-list-labels<
-  %label.show-all-link.active{ data: { type: 'all' } } All
+  #timeline-list-labels.timeline-list-labels<
+    %label.show-all-link.active{ data: { type: 'all' } } All
 
-%ul#timeline.timeline
+  %ul#timeline.timeline
 
-%input#instagram{type: "hidden", data: { token: "682546.39227a9.f2977a8752644eeda3c1a8965b954e58" } }
+  %input#instagram{type: "hidden", data: { token: "682546.39227a9.f2977a8752644eeda3c1a8965b954e58" } }
