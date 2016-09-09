@@ -14,8 +14,20 @@ jobs:
     period: "2015 -"
     description: |
       <ul>
-        <li>User Experience &amp; User Interface Design</li>
-        <li>Front-end web development</li>
+        <li>
+          <p>Key Responsibilities</p>
+          <ul>
+            <li>User Experience & User Interface Design</li>
+            <li>Front-end web development</li>
+            <li>Product design, client support</li>
+          </ul>
+
+          <p>Technologies</p>
+          <ul>
+            <li>AngularJS, React, Gulp, Node</li>
+            <li>Git, Bash, Go, Adobe Creative Suite, Sketch</li>
+          </ul>
+        </li>
       </ul>
   - company: NetEngine
     link: "http://netengine.com.au"
