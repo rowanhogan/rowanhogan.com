@@ -29,9 +29,9 @@ initTimeline = ->
   ,
     name: "github"
     url: "https://api.github.com/users/rowanhogan/events/public?callback=?"
-  # ,
-  #   name: "lastfm"
-  #   url: "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rehogan&api_key=ef147845c58771a584366acb1089d962&format=json&callback=?"
+  ,
+    name: "lastfm"
+    url: "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rehogan&api_key=ef147845c58771a584366acb1089d962&format=json&callback=?"
   ,
     name: "instagram"
     url: "https://api.instagram.com/v1/users/682546/media/recent/?access_token=#{$('#instagram').data('token')}&callback=?"

@@ -9,9 +9,31 @@ social:
   - name: "Dribbble"
     url: "http://dribbble.com/rowanhogan"
 jobs:
+  - company: Everydayhero
+    link: "https://www.everydayhero.com/"
+    title: Senior Software Engineer
+    period: "2016 -"
+    description: |
+      <ul>
+        <li>
+          <p>Key Responsibilities</p>
+          <ul>
+            <li>Full-stack web development</li>
+            <li>User Experience & User Interface Design</li>
+            <li>Project & Client management</li>
+          </ul>
+
+          <p>Technologies</p>
+          <ul>
+            <li>React, Webpack, Node, Ruby/Rails</li>
+            <li>Git, Sketch, Adobe Creative Suite</li>
+          </ul>
+        </li>
+      </ul>
   - company: Pressly
+    link: "https://www.pressly.com/"
     title: Designer/Developer
-    period: "2015 -"
+    period: "2015 - 2016"
     description: |
       <ul>
         <li>
@@ -123,18 +145,18 @@ education:
         <li>Completed minor in Animation.</li>
       </ul>
 skills:
-  - name: Front-end
-    endorsements: 21
   - name: User Interface Design
-    endorsements: 21
+    endorsements: 23
+  - name: Front-end
+    endorsements: 22
+  - name: Web Development
+    endorsements: 17
+  - name: JavaScript
+    endorsements: 15
   - name: SASS
     endorsements: 15
-  - name: JavaScript
-    endorsements: 13
-  - name: Web Development
-    endorsements: 13
   - name: Ruby on Rails
-    endorsements: 10
+    endorsements: 12
   - name: HTML 5
     endorsements: 10
   - name: HAML
