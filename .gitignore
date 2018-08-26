@@ -1,4 +1,5 @@
-.sass-cache
+node_modules
+dist
+npm-debug.log
+yarn-error.log
 .cache
-build
-source/assets/bower_components
