@@ -25,7 +25,7 @@ retrieveItems = (type, url) ->
 initTimeline = ->
   types = [
     name: "dribbble"
-    url: "https://api.dribbble.com/v1/users/rowanhogan/shots?access_token=5f5428831a9e29a663d347e98208de6c1793403210155760730de27280e48a0b&callback=?"
+    url: "https://api.dribbble.com/v2/user/shots?access_token=adfa4877418a73562828b200ee636c713a56efc6efbd7f7f15da04491ddc421e&callback=?"
   ,
     name: "github"
     url: "https://api.github.com/users/rowanhogan/events/public?callback=?"
