@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/rowanhogan/linkedin-scraper.git
-  revision: acf549eb5e03aec449baaba23c1bd6a88c2e3a6b
-  branch: master
-  specs:
-    linkedin-scraper (0.1.5)
-      mechanize
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -188,7 +180,6 @@ PLATFORMS
 DEPENDENCIES
   builder (~> 3.0)
   eco
-  linkedin-scraper!
   middleman
   middleman-autoprefixer
   middleman-blog

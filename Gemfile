@@ -9,6 +9,5 @@ gem 'middleman-syntax'
 
 gem 'builder', '~> 3.0'
 gem 'eco'
-gem 'linkedin-scraper', github: 'rowanhogan/linkedin-scraper', branch: 'master'
 gem 'nokogiri'
 gem 'redcarpet'
