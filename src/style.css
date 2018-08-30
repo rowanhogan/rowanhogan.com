@@ -48,25 +48,16 @@ main {
 }
 
 .timeline-filter {
-  margin: 1em auto;
-  text-align: center;
+  margin: 1em -0.75rem;
 }
 
 .timeline-filter button {
   background: transparent;
   border: 0;
-  padding: 1em;
+  padding: 0.75rem;
   font-size: 0.75em;
   color: inherit;
   outline: 0;
-}
-
-.timeline-filter button:first-child {
-  padding-left: 0;
-}
-
-.timeline-filter button:last-child {
-  padding-right: 0;
 }
 
 .timeline-filter button,
@@ -148,8 +139,11 @@ main {
 
 .logo {
   width: 2rem;
-  order: -2;
-  opacity: 0.75;
+}
+
+.logo path,
+.logo polygon {
+  fill: currentColor;
 }
 
 .logo,
@@ -165,10 +159,6 @@ main {
 }
 
 @media (min-width: 36em) {
-  .timeline-filter {
-    text-align: left;
-  }
-
   .timeline-items {
     margin: 0 1em;
   }
@@ -221,9 +211,14 @@ main {
     padding-bottom: 2rem;
   }
 
-  header,
-  footer {
+  .header,
+  .footer {
     padding: 3rem 0;
+  }
+
+  .footer {
+    border-top: thin solid gainsboro;
+    margin-top: 3rem;
   }
 }
 
