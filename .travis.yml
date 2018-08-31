@@ -1,17 +1,17 @@
 sudo: false
 language: node_js
-branches:
-  only:
-    - master
 cache:
-  bundler: true
-notifications:
-  email: false
+  directories:
+  - node_modules
 before_script:
   - git config --global user.email $GH_EMAIL
   - git config --global user.name $GH_USERNAME
-  - git remote set-url origin https://$GH_TOKEN@github.com/rowanhogan/rowanhogan.com.git
-  - npm install
-  - npm run build
 script:
-  - npm run deploy
+  - npm run build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  local_dir: dist
+  on:
+    branch: master
