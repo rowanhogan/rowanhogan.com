@@ -11,7 +11,10 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
+  keep_history: true
   github_token: $GH_TOKEN
   local_dir: dist
+  fqdn: rowanhogan.com
+  verbose: true
   on:
     branch: master
