@@ -79,7 +79,7 @@ export const deserializeItems = (data, source) => {
     case 'lastfm':
       return data.recenttracks.track.map(item => ({
         source,
-        date: parseInt(item.date.uts) * 1000,
+        date: item.date ? parseInt(item.date.uts) * 1000 : Date.now(),
         image: item.image.find(({ size }) => size === 'extralarge')['#text'],
         title: (
           <span>
