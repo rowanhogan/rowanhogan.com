@@ -1,10 +1,8 @@
+## Personal site & portfolio
 
-Personal site & portfolio
--------------------------
+This site uses [Parcel](https://parceljs.org/) to generate a static site hosted on [GitHub Pages](https://pages.github.com/).
 
-This site uses [Middleman](https://middlemanapp.com) to generate a static site hosted on [GitHub Pages](https://pages.github.com/).
-
-Set up to build & deploy automatically from [Prose.io](http://prose.io) using [Travis CI](https://travis-ci.org), or straight from the command line.
+Set up to build & deploy automatically using [Travis CI](https://travis-ci.org), or straight from the command line.
 
 By all means, feel free to poke around and use/abuse anything that suits your project.
 
