@@ -2,8 +2,6 @@
 
 This site uses [Parcel](https://parceljs.org/) to generate a static site hosted on [GitHub Pages](https://pages.github.com/).
 
-Set up to build & deploy automatically using [Travis CI](https://travis-ci.org), or straight from the command line.
+By all means, feel free to poke around and use anything that suits your project.
 
-By all means, feel free to poke around and use/abuse anything that suits your project.
-
-[![Travis CI Status](https://travis-ci.org/rowanhogan/rowanhogan.com.svg)](https://travis-ci.org/rowanhogan/rowanhogan.com/)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/rowanhogan/rowanhogan.com/tree/main.svg?style=svg&circle-token=e42d9f30f5b00214420e77904b4b0265b0af8d39)](https://dl.circleci.com/status-badge/redirect/gh/rowanhogan/rowanhogan.com/tree/main)
